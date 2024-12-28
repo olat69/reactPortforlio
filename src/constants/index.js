@@ -3,16 +3,15 @@ import project2 from "../assets/project-2.jpg";
 import project3 from "../assets/project-3.jpg";
 import project4 from "../assets/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for 
+export const HERO_CONTENT = `I am a passionate M.E.R.N stack developer with a knack for 
 crafting robust and scalable web applications. With 3 years of hands-on experience,
- I have honed my skills in front-end technologies like JavaScript and React, 
- as well as back-end technologies like Node.js and Express.js. Also MongoDb for Database technologies 
+ I have honed my skills in Front-end technologies like JavaScript, React and Next.js, Back-end technologies like Node.js and Express.js, Database technologies like MongoDB, including RESTful APIs.
 My goal is to leverage my expertise to create innovative solutions that 
 drive business growth and deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for 
 creating efficient and user-friendly web applications. With 3 years of self-taught experience in project developments, 
-I have worked with a variety of technologies, including React, Express.js, Node.js, MongoDb, I also have understanding of syntaxes in C++, Java, and Phyton.
+I have worked with a variety of technologies, I also have understanding of syntaxes in C++, Java, and Python.
 My journey in web development began with a deep curiosity for how things work, and it has 
 evolved into a career where I continuously strive to learn and adapt to new challenges. 
 I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions.
@@ -39,7 +38,6 @@ export const EXPERIENCES = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];
-
 export const PROJECTS = [
   {
     title: "E-Commerce Website",
@@ -49,11 +47,12 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
   },
   {
-    title: "Task Management App",
+    title: "Book Store Website ",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+      "A responsive application for displaying books for sale and their prices, including other features",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
+    url: "https://react-bookstore-q634.vercel.app/",
   },
   {
     title: "Portfolio Website",
@@ -61,12 +60,15 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["Node.js", "React", "TailWind"],
+    url: "https://my-portforlio-plum.vercel.app/",
   },
   {
     title: "Hotel Website",
     image: project4,
-    description: "An hotel website showing features and booking options.",
+    description:
+      "An hotel website showing features, booking options, and a login and signup page and other features.",
     technologies: ["HTML", "CSS", "JavaScript"],
+    url: "https://olat69.github.io/htmlWebsite/",
   },
 ];
 

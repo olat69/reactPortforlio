@@ -2,6 +2,8 @@ import { PROJECTS } from "../constants";
 import { motion } from "motion/react";
 
 const Projects = () => {
+  const handleClick = () => {};
+
   return (
     <div className="border-b border-neutral-900 pb-4">
       <motion.h2
@@ -35,7 +37,17 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleClick(project.url)}
+              >
+                <h6 className="mb-2 font-semibold hover:text-purple-700">
+                  {project.title}
+                </h6>
+              </a>
+
               <p className="mb4 text-neutral-400">{project.description}</p>
               {project.technologies.map((tech, index) => (
                 <span
