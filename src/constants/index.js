@@ -52,7 +52,7 @@ export const PROJECTS = [
     description:
       "A responsive application for displaying books for sale and their prices, including other features",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
-    url: "https://react-bookstore-q634.vercel.app/",
+    url: "https://mern-bookstore-khaki.vercel.app/",
   },
   {
     title: "Portfolio Website",
