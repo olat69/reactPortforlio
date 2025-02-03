@@ -21,8 +21,8 @@ I thrive in collaborative environments and enjoy solving complex problems to del
 export const EXPERIENCES = [
   {
     year: "2022 - Present",
-    role: "Freelance",
-    company: "Freelancing",
+    role: "Freelancing",
+    company: "Freelance",
     description: `Developing and maintaining web applications using JavaScript, React.js, and Node.js. 
     Implemented RESTful APIs and integrated with MongoDB databases. 
     Collaborated with stakeholders to define project requirements and timelines.`,
@@ -65,7 +65,7 @@ export const PROJECTS = [
     title: "Hotel Website",
     image: project4,
     description:
-      "A modern and user-friendly hotel website designed to offer seamless browsing, booking, and user account management. Built with a focus on intuitive navigation and functionality, this site provides an efficient experience for both potential guests and hotel administrators. Key Features; Hotel Information & Features (Comprehensive details about available rooms, amenities, and services), Room Booking Options (Real-time availability check, booking forms, and confirmation emails), User Authentication (Secure login and registration for users to manage bookings and view history), Responsive Design (Optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop), Contact and Support (Easy access to customer support and inquiries), Admin Panel (Management interface for admins to track bookings, manage rooms, and update hotel details) Technologies Used; JavaScript, Html, CSS",
+      "A frontend modern and user-friendly hotel website designed to offer seamless browsing, booking, and user account management. Built with a focus on intuitive navigation and functionality, this site provides an efficient experience for both potential guests and hotel administrators. Key Features; Hotel Information & Features (Comprehensive details about available rooms, amenities, and services), Room Booking Options (Real-time availability check, booking forms, and confirmation emails), User Authentication (Secure login and registration for users to manage bookings and view history), Responsive Design (Optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop), Contact and Support (Easy access to customer support and inquiries), Admin Panel (Management interface for admins to track bookings, manage rooms, and update hotel details) Technologies Used; JavaScript, Html, CSS",
     technologies: ["HTML", "CSS", "JavaScript"],
     url: "https://olat69.github.io/htmlWebsite/",
   },
