@@ -40,17 +40,16 @@ export const EXPERIENCES = [
 ];
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Blog Website",
     image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+    description: "A fully functional blog website (...in development).",
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
   },
   {
-    title: "Book Store Website ",
+    title: "Bookstore Website",
     image: project2,
     description:
-      "A responsive application for displaying books for sale and their prices, including other features",
+      "A dynamic, full-stack e-commerce bookstore website built using modern technologies to provide a seamless and responsive user experience. It includes features for browsing, shopping, and secure payment processing. Key Features; User Authentication (Secure login and registration), Book Listings (Dynamic display with filtering and search), Shopping Cart & Checkout (Add books to cart and proceed to checkout), Order Management (Admin panel to manage orders and stock, Payment Integration (Secure transactions via Paystack), Responsive Design (Mobile-friendly design for all devices). Technologies Used; React, Redux & RTK Query, MongoDB, Node.js & Express, Paystack, Firebase",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
     url: "https://mern-bookstore-khaki.vercel.app/",
   },
@@ -58,15 +57,15 @@ export const PROJECTS = [
     title: "Portfolio Website",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["Node.js", "React", "TailWind"],
+      "A sleek, interactive portfolio website designed to showcase my work and technical expertise, built using modern web technologies for an engaging and responsive user experience. The website features smooth animations, a clean design, and intuitive navigation, all tailored to highlight my projects and skills. Key Features; Personalized Portfolio Showcase (A well-organized display of my projects, skills, and achievements with detailed project descriptions), Smooth Animations (Engaging animations that bring the website to life, offering a dynamic and visually appealing experience), Responsive Design (Fully responsive layout that ensures optimal viewing on all devices, from mobile phones to desktops), Interactive Navigation (A seamless, user-friendly navigation experience for browsing different sections, including About, Projects, and Contact), Contact Form (A direct way for potential clients or collaborators to reach out to me). Technologies Used: JavaScript, React, Framer Motion, Tailwind CSS",
+    technologies: ["React.js", "Framer", "TailWind"],
     url: "https://my-portforlio-plum.vercel.app/",
   },
   {
     title: "Hotel Website",
     image: project4,
     description:
-      "An hotel website showing features, booking options, and a login and signup page and other features.",
+      "A modern and user-friendly hotel website designed to offer seamless browsing, booking, and user account management. Built with a focus on intuitive navigation and functionality, this site provides an efficient experience for both potential guests and hotel administrators. Key Features; Hotel Information & Features (Comprehensive details about available rooms, amenities, and services), Room Booking Options (Real-time availability check, booking forms, and confirmation emails), User Authentication (Secure login and registration for users to manage bookings and view history), Responsive Design (Optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop), Contact and Support (Easy access to customer support and inquiries), Admin Panel (Management interface for admins to track bookings, manage rooms, and update hotel details) Technologies Used; JavaScript, Html, CSS",
     technologies: ["HTML", "CSS", "JavaScript"],
     url: "https://olat69.github.io/htmlWebsite/",
   },
