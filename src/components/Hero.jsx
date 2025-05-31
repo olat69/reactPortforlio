@@ -9,7 +9,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-950 pb-4 lg:mb-35">
+    <div className="border-b border-neutral-950 pb-4 lg:mb-35 ml-5">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -17,7 +17,7 @@ const Hero = () => {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-6xl"
+              className="pb-12 text-6xl font-thin tracking-tight lg:mt-5 lg:text-6xl"
             >
               Olaniyan Temitope
             </motion.h1>
@@ -34,7 +34,7 @@ const Hero = () => {
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-2 max-w-xl py-6 font-light tracking-tighter "
             >
               {HERO_CONTENT}
             </motion.p>
@@ -46,7 +46,7 @@ const Hero = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="max-w-xs pl-6"
+              className="max-w-xs rounded-xl"
               src={profilepic}
               alt="profilepic"
             />

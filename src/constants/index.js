@@ -2,23 +2,43 @@ import project1 from "../assets/project-1.jpg";
 import project2 from "../assets/project-2.jpg";
 import project3 from "../assets/project-3.jpg";
 import project4 from "../assets/project-4.jpg";
+import project5 from "../assets/project-5.jpg";
+import project6 from "../assets/project-6.jpg";
 
-export const HERO_CONTENT = `I am a passionate M.E.R.N stack developer with a knack for 
-crafting robust and scalable web applications. With 3 years of hands-on experience,
- I have honed my skills in Front-end technologies like JavaScript, React and Next.js, Back-end technologies like Node.js and Express.js, Database technologies like MongoDB, including RESTful APIs.
-My goal is to leverage my expertise to create innovative solutions that 
-drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `As a Full-Stack Developer & Mobile Solutions Architect, transforming ideas into scalable digital experiences across web and mobile platforms. 
+With 3+ years of specialized experience in the M.E.R.N ecosystem, I architect and develop high-performance applications that bridge the gap between innovative design and robust functionality. My expertise spans the complete development lifecycle—from responsive web interfaces built with React and Next.js to cross-platform mobile applications using React Native.
+Core Competencies
+-Frontend Excellence: JavaScript (ES6+), React, Next.js, React Native
+-Backend Mastery: Node.js, Express.js, RESTful API design
+-Database Solutions: MongoDB, data modeling and optimization
+-Mobile Development: Native iOS/Android experiences via React Native
+I specialize in creating seamless user experiences while maintaining clean, maintainable codebases that scale with business growth. My approach combines technical precision with strategic thinking to deliver solutions that not only meet current requirements but anticipate future needs.
+Ready to turn your vision into reality through code.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for 
-creating efficient and user-friendly web applications. With 3 years of self-taught experience in project developments, 
-I have worked with a variety of technologies, I also have understanding of syntaxes in C++, Java, and Python.
-My journey in web development began with a deep curiosity for how things work, and it has 
-evolved into a career where I continuously strive to learn and adapt to new challenges. 
-I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions.
- Outside of coding, I enjoy staying active, exploring new technologies, 
+export const ABOUT_TEXT = `My journey into software development started with a simple question: "How does this work?" That curiosity has driven me through 3+ years of self-directed learning and hands-on project development, transforming from someone who wondered about code to someone who crafts solutions with it. What sets me apart is my adaptability—I'm equally productive working independently on focused coding sessions and collaborating in team environments where ideas flow freely. I'm a natural problem-solver who thrives on breaking down complex challenges into manageable components, and I've learned that great software emerges from clear communication, active listening, and the ability to translate technical concepts into language that stakeholders understand.
+
+When faced with new technologies or frameworks, I don't just learn the syntax—I dive deep to understand the underlying principles. This approach has served me well as I've expanded my toolkit beyond the M.E.R.N stack to include Java and Python, allowing me to choose the right tool for each project's unique requirements. Whether I'm leading a sprint, pair programming, or heads-down in solo development, I adapt my communication style to what the situation demands. I believe in writing clean, documented code not just for myself, but for the next developer who might work on the project, and my enthusiasm for continuous learning means I'm always exploring emerging technologies to improve the quality and efficiency of my solutions., 
  and contributing to projects.`;
 
 export const EXPERIENCES = [
+  {
+    year: "2024-2025",
+    role: "Software Engineer",
+    company: "Nitoons",
+    description: `Developing and maintaining web applications using JavaScript, React.js, and Node.js. 
+    Implemented RESTful APIs and integrated with MongoDB databases. 
+    Collaborated with stakeholders to define project requirements and timelines.`,
+    technologies: ["React Native", "Node.js", "MongoDB"],
+  },
+  {
+    year: "2024-2025",
+    role: "Frontend Developer",
+    company: "Anthill Studio",
+    description: `Developing and maintaining web applications using Nextjs and React. 
+    Implemented RESTful APIs and integrated with MongoDB databases. 
+    Collaborated with stakeholders to define project requirements and timelines.`,
+    technologies: ["React.js", "Next", "Material UI", "MongoDB"],
+  },
   {
     year: "2022 - Present",
     role: "Freelancing",
@@ -26,7 +46,7 @@ export const EXPERIENCES = [
     description: `Developing and maintaining web applications using JavaScript, React.js, and Node.js. 
     Implemented RESTful APIs and integrated with MongoDB databases. 
     Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
+    technologies: ["React.js", "Express.js", "Node.js", "Tailwind"],
   },
   {
     year: "2021 - 2022",
@@ -40,13 +60,25 @@ export const EXPERIENCES = [
 ];
 export const PROJECTS = [
   {
-    title: "Blog Website",
-    image: project1,
+    title: "Nitoons Scriptwriter",
+    image: project5,
     description: "A fully functional blog website (...in development).",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+    technologies: ["React", "Node.js", "MongoDB", "Material Ui"],
   },
   {
-    title: "Bookstore Website",
+    title: "OneTake Admin-Dashboard",
+    image: project5,
+    description: "A fully functional blog website (...in development).",
+    technologies: ["React", "Node.js", "MongoDB", "Material Ui"],
+  },
+  {
+    title: "OneTake Web-App",
+    image: project6,
+    description: "A fully functional blog website (...in development).",
+    technologies: ["Nextjs", "Node.js", "Tailwind"],
+  },
+  {
+    title: "Delight Bookstore",
     image: project2,
     description:
       "A dynamic, full-stack e-commerce bookstore website built using modern technologies to provide a seamless and responsive user experience. It includes features for browsing, shopping, and secure payment processing. Key Features; User Authentication (Secure login and registration), Book Listings (Dynamic display with filtering and search), Shopping Cart & Checkout (Add books to cart and proceed to checkout), Order Management (Admin panel to manage orders and stock, Payment Integration (Secure transactions via Paystack), Responsive Design (Mobile-friendly design for all devices). Technologies Used; React, Redux & RTK Query, MongoDB, Node.js & Express, Paystack, Firebase",
@@ -62,7 +94,7 @@ export const PROJECTS = [
     url: "https://my-portforlio-plum.vercel.app/",
   },
   {
-    title: "Hotel Website",
+    title: "Lincoln Hotels",
     image: project4,
     description:
       "A frontend modern and user-friendly hotel website designed to offer seamless browsing, booking, and user account management. Built with a focus on intuitive navigation and functionality, this site provides an efficient experience for both potential guests and hotel administrators. Key Features; Hotel Information & Features (Comprehensive details about available rooms, amenities, and services), Room Booking Options (Real-time availability check, booking forms, and confirmation emails), User Authentication (Secure login and registration for users to manage bookings and view history), Responsive Design (Optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop), Contact and Support (Easy access to customer support and inquiries), Admin Panel (Management interface for admins to track bookings, manage rooms, and update hotel details) Technologies Used; JavaScript, Html, CSS",

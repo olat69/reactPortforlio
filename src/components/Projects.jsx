@@ -43,7 +43,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 onClick={() => handleClick(project.url)}
               >
-                <h6 className="mb-2 font-semibold hover:text-purple-700">
+                <h6 className="mb-2 font-semibold hover:text-purple-700 text-xl">
                   {project.title}
                 </h6>
               </a>
