@@ -4,6 +4,7 @@ import project3 from "../assets/project-3.jpg";
 import project4 from "../assets/project-4.jpg";
 import project5 from "../assets/project-5.jpg";
 import project6 from "../assets/project-6.jpg";
+import project7 from "../assets/project-7.jpg";
 
 export const HERO_CONTENT = `As a Full-Stack Developer & Mobile Solutions Architect, transforming ideas into scalable digital experiences across web and mobile platforms. 
 With 3+ years of specialized experience in the M.E.R.N ecosystem, I architect and develop high-performance applications that bridge the gap between innovative design and robust functionality. My expertise spans the complete development lifecycle—from responsive web interfaces built with React and Next.js to cross-platform mobile applications using React Native.
@@ -61,21 +62,27 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "Nitoons Scriptwriter",
-    image: project5,
-    description: "A fully functional blog website (...in development).",
+    image: project7,
+    description:
+      "Developed a comprehensive mobile scriptwriting application designed to empower writers with professional-grade tools for creating scripts on-the-go. Built specifically for scriptwriters and creative writers who need more than basic note-taking apps, the application features industry-standard script formatting, character development tools, scene organization, and collaborative editing capabilities. Leading the frontend development using React Native over 3-4 months, I collaborated closely with backend engineers utilizing Node.js to deliver a seamless cross-platform experience. The app successfully launched with positive user feedback from beta testers, addressing the genuine need for mobile-first scriptwriting tools that maintain professional formatting standards while offering the flexibility of anywhere-access writing.",
     technologies: ["React", "Node.js", "MongoDB", "Material Ui"],
+    git: "https://github.com/Pledre/scriptwriter-mobile-app",
   },
   {
     title: "OneTake Admin-Dashboard",
     image: project5,
-    description: "A fully functional blog website (...in development).",
+    description:
+      "Developed a comprehensive content management system for the acting industry, featuring an intuitive admin dashboard for monitoring platform activity and user engagement. The platform manages actors, producers, and their monologue content through a centralized interface that tracks user registrations, script uploads, and post performance metrics. Built with modern web technologies, the dashboard provides real-time analytics including signup activity tracking, engagement metrics visualization, and comprehensive user management tools. I architected the frontend interface with responsive design principles, implementing interactive charts and data visualization components that enable administrators to monitor platform growth and user behavior patterns effectively. The system successfully supports content creators in the entertainment industry with robust analytics and streamlined content management capabilities.",
     technologies: ["React", "Node.js", "MongoDB", "Material Ui"],
+    git: "https://github.com/Pledre/onetake-admin-dashboard",
   },
   {
     title: "OneTake Web-App",
     image: project6,
-    description: "A fully functional blog website (...in development).",
+    description:
+      "Developed a dynamic social media platform connecting actors and producers through short-form video content showcasing auditions and script monologues. Built with Next.js frontend and Node.js backend, the platform enables actors to upload performance videos while providing producers with streamlined talent discovery tools. I led the complete frontend development, collaborating closely with backend engineers to ensure seamless video upload, user authentication, and content management functionality. The project deepened my expertise in Next.js architecture and complex state management. Successfully launched with positive user feedback from both actors and industry professionals, demonstrating strong product-market fit in the entertainment industry.",
     technologies: ["Nextjs", "Node.js", "Tailwind"],
+    git: "https://github.com/Pledre/OneTakeWeb",
   },
   {
     title: "Delight Bookstore",
@@ -84,6 +91,7 @@ export const PROJECTS = [
       "A dynamic, full-stack e-commerce bookstore website built using modern technologies to provide a seamless and responsive user experience. It includes features for browsing, shopping, and secure payment processing. Key Features; User Authentication (Secure login and registration), Book Listings (Dynamic display with filtering and search), Shopping Cart & Checkout (Add books to cart and proceed to checkout), Order Management (Admin panel to manage orders and stock, Payment Integration (Secure transactions via Paystack), Responsive Design (Mobile-friendly design for all devices). Technologies Used; React, Redux & RTK Query, MongoDB, Node.js & Express, Paystack, Firebase",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
     url: "https://mern-bookstore-khaki.vercel.app/",
+    git: "https://github.com/olat69/mernBookstore",
   },
   {
     title: "Portfolio Website",
@@ -92,6 +100,7 @@ export const PROJECTS = [
       "A sleek, interactive portfolio website designed to showcase my work and technical expertise, built using modern web technologies for an engaging and responsive user experience. The website features smooth animations, a clean design, and intuitive navigation, all tailored to highlight my projects and skills. Key Features; Personalized Portfolio Showcase (A well-organized display of my projects, skills, and achievements with detailed project descriptions), Smooth Animations (Engaging animations that bring the website to life, offering a dynamic and visually appealing experience), Responsive Design (Fully responsive layout that ensures optimal viewing on all devices, from mobile phones to desktops), Interactive Navigation (A seamless, user-friendly navigation experience for browsing different sections, including About, Projects, and Contact), Contact Form (A direct way for potential clients or collaborators to reach out to me). Technologies Used: JavaScript, React, Framer Motion, Tailwind CSS",
     technologies: ["React.js", "Framer", "TailWind"],
     url: "https://my-portforlio-plum.vercel.app/",
+    git: "https://github.com/olat69/reactPortforlio",
   },
   {
     title: "Lincoln Hotels",
@@ -100,11 +109,12 @@ export const PROJECTS = [
       "A frontend modern and user-friendly hotel website designed to offer seamless browsing, booking, and user account management. Built with a focus on intuitive navigation and functionality, this site provides an efficient experience for both potential guests and hotel administrators. Key Features; Hotel Information & Features (Comprehensive details about available rooms, amenities, and services), Room Booking Options (Real-time availability check, booking forms, and confirmation emails), User Authentication (Secure login and registration for users to manage bookings and view history), Responsive Design (Optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop), Contact and Support (Easy access to customer support and inquiries), Admin Panel (Management interface for admins to track bookings, manage rooms, and update hotel details) Technologies Used; JavaScript, Html, CSS",
     technologies: ["HTML", "CSS", "JavaScript"],
     url: "https://olat69.github.io/htmlWebsite/",
+    git: "https://github.com/olat69/htmlWebsite",
   },
 ];
 
 export const CONTACT = {
   address: "Jemi Alade Estate, Isheri, Lagos, Nigeria",
-  phoneNo: "07056502162 ",
+  phoneNo: "+234 7056502162 ",
   email: "olaniyantemitope69@gmail.com",
 };
