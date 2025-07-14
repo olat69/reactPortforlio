@@ -3,6 +3,10 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
+import { TbBrandTypescript } from "react-icons/tb";
+import { DiRedis } from "react-icons/di";
+import { SiNestjs } from "react-icons/si";
+import { FaDocker } from "react-icons/fa6";
 import { motion } from "motion/react";
 
 const iconVariants = (duration) => ({
@@ -77,6 +81,42 @@ const Technologies = () => {
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
           <FaNodeJs className="text-6xl text-green-500" />
+        </motion.div>
+
+        <motion.div
+          variants={iconVariants(2.0)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <TbBrandTypescript className="text-6xl text-blue-500" />
+        </motion.div>
+
+        <motion.div
+          variants={iconVariants(2.5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <DiRedis className="text-6xl text-red-500" />
+        </motion.div>
+
+        <motion.div
+          variants={iconVariants(2.0)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <SiNestjs className="text-6xl text-green-500" />
+        </motion.div>
+
+        <motion.div
+          variants={iconVariants(2.7)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <FaDocker className="text-6xl text-blue-500" />
         </motion.div>
       </motion.div>
     </div>

@@ -1,7 +1,7 @@
 import project1 from "../assets/project-1.jpg";
 import project2 from "../assets/project-2.jpg";
 import project3 from "../assets/project-3.jpg";
-import project4 from "../assets/project-4.jpg";
+import project4 from "../assets/project-4.png";
 import project5 from "../assets/project-5.jpg";
 import project6 from "../assets/project-6.jpg";
 import project7 from "../assets/project-7.jpg";
@@ -74,6 +74,7 @@ export const PROJECTS = [
     description:
       "Developed a comprehensive content management system for the acting industry, featuring an intuitive admin dashboard for monitoring platform activity and user engagement. The platform manages actors, producers, and their monologue content through a centralized interface that tracks user registrations, script uploads, and post performance metrics. Built with modern web technologies, the dashboard provides real-time analytics including signup activity tracking, engagement metrics visualization, and comprehensive user management tools. I architected the frontend interface with responsive design principles, implementing interactive charts and data visualization components that enable administrators to monitor platform growth and user behavior patterns effectively. The system successfully supports content creators in the entertainment industry with robust analytics and streamlined content management capabilities.",
     technologies: ["React", "Node.js", "MongoDB", "Material Ui"],
+    url:"https://admindashboard.onetake.pro/",
     git: "https://github.com/Pledre/onetake-admin-dashboard",
   },
   {
@@ -82,6 +83,7 @@ export const PROJECTS = [
     description:
       "Developed a dynamic social media platform connecting actors and producers through short-form video content showcasing auditions and script monologues. Built with Next.js frontend and Node.js backend, the platform enables actors to upload performance videos while providing producers with streamlined talent discovery tools. I led the complete frontend development, collaborating closely with backend engineers to ensure seamless video upload, user authentication, and content management functionality. The project deepened my expertise in Next.js architecture and complex state management. Successfully launched with positive user feedback from both actors and industry professionals, demonstrating strong product-market fit in the entertainment industry.",
     technologies: ["Nextjs", "Node.js", "Tailwind"],
+    url:"",
     git: "https://github.com/Pledre/OneTakeWeb",
   },
   {
@@ -106,10 +108,10 @@ export const PROJECTS = [
     title: "Lincoln Hotels",
     image: project4,
     description:
-      "A frontend modern and user-friendly hotel website designed to offer seamless browsing, booking, and user account management. Built with a focus on intuitive navigation and functionality, this site provides an efficient experience for both potential guests and hotel administrators. Key Features; Hotel Information & Features (Comprehensive details about available rooms, amenities, and services), Room Booking Options (Real-time availability check, booking forms, and confirmation emails), User Authentication (Secure login and registration for users to manage bookings and view history), Responsive Design (Optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop), Contact and Support (Easy access to customer support and inquiries), Admin Panel (Management interface for admins to track bookings, manage rooms, and update hotel details) Technologies Used; JavaScript, Html, CSS",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    url: "https://olat69.github.io/htmlWebsite/",
-    git: "https://github.com/olat69/htmlWebsite",
+      "A frontend modern and user-friendly hotel website designed to offer seamless browsing, booking, and user account management. Built with a focus on intuitive navigation and functionality, this site provides an efficient experience for both potential guests and hotel administrators. Key Features; Hotel Information & Features (Comprehensive details about available rooms, amenities, and services), Room Booking Options (Real-time availability check, booking forms, and confirmation emails), User Authentication (Secure login and registration for users to manage bookings and view history), Responsive Design (Optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop), Contact and Support (Easy access to customer support and inquiries), Admin Panel (Management interface for admins to track bookings, manage rooms, and update hotel details) Technologies Used; React, Material UI, Framer Motion, GSAP",
+    technologies: ["React", "MaterialUi", "FramerMotion", "GSAP"],
+    url: "https://lincoln-hotels.vercel.app/",
+    git: "https://github.com/olat69/LincolnHotels",
   },
 ];
 
