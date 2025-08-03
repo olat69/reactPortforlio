@@ -23,7 +23,7 @@ When faced with new technologies or frameworks, I don't just learn the syntax—
 
 export const EXPERIENCES = [
   {
-    year: "2024-2025",
+    year: "2025 - Present",
     role: "Software Engineer",
     company: "Nitoons",
     description: `Developing and maintaining web applications using JavaScript, React.js, and Node.js. 
@@ -32,7 +32,7 @@ export const EXPERIENCES = [
     technologies: ["React Native", "Node.js", "MongoDB"],
   },
   {
-    year: "2024-2025",
+    year: "2024 - 2025",
     role: "Frontend Developer",
     company: "Anthill Studio",
     description: `Developing and maintaining web applications using Nextjs and React. 
@@ -41,7 +41,7 @@ export const EXPERIENCES = [
     technologies: ["React.js", "Next", "Material UI", "MongoDB"],
   },
   {
-    year: "2022 - Present",
+    year: "2023 - 2024",
     role: "Freelancing",
     company: "Freelance",
     description: `Developing and maintaining web applications using JavaScript, React.js, and Node.js. 
