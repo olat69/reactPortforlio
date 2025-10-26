@@ -9,7 +9,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-950 pb-4 lg:mb-35 ml-5">
+    <div className="border-neutral-950 pb-4 lg:mb-35 ml-5">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">

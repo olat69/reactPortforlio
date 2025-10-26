@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="border-b border-neutral-900 pb-20 px-4 pt-16">
+    <section className="border-neutral-900 pb-20 px-4 pt-16">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
