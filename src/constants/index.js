@@ -29,10 +29,10 @@ export const EXPERIENCES = [
     year: "2025 - Present",
     role: "Software Engineer",
     company: "Nitoons",
-    description: `Developing and maintaining web applications using JavaScript, React.js, and Node.js. 
-    Implemented RESTful APIs and integrated with MongoDB databases. 
+    description: `Developing and maintaining mobile and web applications using React Native, JavaScript, React.js, and Node.js. 
+    Implemented RESTful APIs and integrated with MongoDB databases, also developed CI/CD pipelines using Docker and Coolify. 
     Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["React Native", "Node.js", "MongoDB"],
+    technologies: ["React Native", "Node.js", "MongoDB", "Docker", "Coolify"],
   },
   {
     year: "2024 - 2025",
@@ -68,7 +68,7 @@ export const PROJECTS = [
     title: "Magical Docs",
     image: project8,
     description:
-        "Developed an intelligent documentation platform that transforms codebases into living, interactive knowledge hubs for development teams. Magical Docs automatically analyzes repositories, generates architecture diagrams, and provides AI-powered answers to technical questions, eliminating the need for manual documentation. I led the frontend development using React, focusing on seamless user experience and real-time code analysis visualization. The platform streamlines onboarding, accelerates team productivity, and ensures that technical knowledge remains current and accessible. Successfully adopted by teams seeking to reduce documentation overhead and foster a culture of continuous learning.",
+        "Developed an intelligent documentation platform that transforms codebases into living, interactive knowledge hubs for development teams. Magical Docs automatically analyzes repositories, generates architecture diagrams, and provides AI-powered answers to technical questions, eliminating the need for manual documentation. I led the development using React for the front end and Node.js for the back end, focusing on seamless user experience and real-time code analysis visualization. The platform streamlines onboarding, accelerates team productivity, and ensures that technical knowledge remains current and accessible. Successfully adopted by teams seeking to reduce documentation overhead and foster a culture of continuous learning.",
     technologies: ["React", "Node.js", "MongoDB", "OpenAI"],
     url:"https://magicaldocstesting.nitoons.com",
     git:"https://github.com/Pledre/magical_docs_frontend",
@@ -77,7 +77,7 @@ export const PROJECTS = [
     title: "Nitoons Scriptwriter",
     image: project7,
     description:
-      "Developed a comprehensive mobile scriptwriting application designed to empower writers with professional-grade tools for creating scripts on-the-go. Built specifically for scriptwriters and creative writers who need more than basic note-taking apps, the application features industry-standard script formatting, character development tools, scene organization, and collaborative editing capabilities. Leading the frontend development using React Native over 3-4 months, I collaborated closely with backend engineers utilizing Node.js to deliver a seamless cross-platform experience. The app successfully launched with positive user feedback from beta testers, addressing the genuine need for mobile-first scriptwriting tools that maintain professional formatting standards while offering the flexibility of anywhere-access writing.",
+      "Developed a comprehensive mobile scriptwriting application designed to empower writers with professional-grade tools for creating scripts on-the-go. Built specifically for scriptwriters and creative writers who need more than basic note-taking apps, the application features industry-standard script formatting, character development tools, scene organization, and collaborative editing capabilities. Leading the development using React Native for frontend and Node.js for backend over 3-4 months to deliver a seamless cross-platform experience. The app successfully launched with positive user feedback from beta testers, addressing the genuine need for mobile-first scriptwriting tools that maintain professional formatting standards while offering the flexibility of anywhere-access writing.",
     technologies: ["React", "Node.js", "MongoDB", "Material Ui"],
     git: "https://github.com/Pledre/scriptwriter-mobile-app",
   },
@@ -129,7 +129,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Jemi Alade Estate, Isheri, Lagos, Nigeria",
+  address: "Lagos, Nigeria",
   phoneNo: "+234 7056502162 ",
   email: "olaniyantemitope69@gmail.com",
 };
