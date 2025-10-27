@@ -5,6 +5,7 @@ import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import CourseCertification from "./components/Course-Certification";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Hero />
       <About />
       <Technologies />
+      <CourseCertification />
       <Experience />
       <Projects />
       <Contact />

@@ -24,7 +24,7 @@ const iconVariants = (duration) => ({
 
 const Technologies = () => {
   return (
-    <div className="border-b border-neutral-800 pb-24 ">
+    <div className="border-neutral-800 pb-24 ">
       <motion.h2
         whileInView={{ y: 0, opacity: 1 }}
         initial={{ y: -100, opacity: 0 }}

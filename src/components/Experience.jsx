@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const Experience = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div className="border-neutral-900 pb-4">
       <motion.h2
         whileInView={{ y: 0, opacity: 1 }}
         initial={{ y: -100, opacity: 0 }}

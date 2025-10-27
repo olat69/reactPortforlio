@@ -5,6 +5,9 @@ import project4 from "../assets/project-4.png";
 import project5 from "../assets/project-5.jpg";
 import project6 from "../assets/project-6.jpg";
 import project7 from "../assets/project-7.jpg";
+import project8 from "../assets/project-8.png";
+import cert1 from "../assets/cert-1.jpeg";
+import cert2 from "../assets/cert-2.jpeg";
 
 export const HERO_CONTENT = `As a Full-Stack Developer & Mobile Solutions Architect, transforming ideas into scalable digital experiences across web and mobile platforms. 
 With 3+ years of specialized experience in the M.E.R.N ecosystem, I architect and develop high-performance applications that bridge the gap between innovative design and robust functionality. My expertise spans the complete development lifecycle—from responsive web interfaces built with React and Next.js to cross-platform mobile applications using React Native.
@@ -60,6 +63,16 @@ export const EXPERIENCES = [
   },
 ];
 export const PROJECTS = [
+
+  {
+    title: "Magical Docs",
+    image: project8,
+    description:
+        "Developed an intelligent documentation platform that transforms codebases into living, interactive knowledge hubs for development teams. Magical Docs automatically analyzes repositories, generates architecture diagrams, and provides AI-powered answers to technical questions, eliminating the need for manual documentation. I led the frontend development using React, focusing on seamless user experience and real-time code analysis visualization. The platform streamlines onboarding, accelerates team productivity, and ensures that technical knowledge remains current and accessible. Successfully adopted by teams seeking to reduce documentation overhead and foster a culture of continuous learning.",
+    technologies: ["React", "Node.js", "MongoDB", "OpenAI"],
+    url:"https://magicaldocstesting.nitoons.com",
+    git:"https://github.com/Pledre/magical_docs_frontend",
+      },
   {
     title: "Nitoons Scriptwriter",
     image: project7,
@@ -120,3 +133,20 @@ export const CONTACT = {
   phoneNo: "+234 7056502162 ",
   email: "olaniyantemitope69@gmail.com",
 };
+
+export const CERTIFICATIONS = [
+  {
+    title: "Introduction to Dev-Ops",
+    image: cert1,
+    issuer: "Coursera - IBM",
+    date: "Aug 2025",
+    url: "https://coursera.org/verify/5JH9AP1WVSJA",
+  },
+  {
+    title: "AWS Cloud Practitioner Essentials",
+    image: cert2,
+    issuer: "Coursera - Amazon Web Services",
+    date: "Oct 2025",
+    url: "https://coursera.org/verify/BIC0ZYGQA6YD",
+  },
+];
