@@ -12,7 +12,7 @@ import cert2 from "../assets/cert-2.jpeg";
 export const HERO_CONTENT = `As a Full-Stack Web & Mobile Software Engineer, transforming ideas into scalable digital experiences across web and mobile platforms. 
 With 3+ years of specialized experience in the software development ecosystem, I architect and develop high-performance applications that bridge the gap between innovative design and robust functionality. My expertise spans the complete development lifecycle—from responsive web interfaces built with React and Next.js to cross-platform mobile applications using React Native.
 Core Competencies
--Frontend Excellence: JavaScript (ES6+), React, Next.js, React Native. -Backend Mastery: Node.js, Express.js, RESTful API design, Python, FAST api. -Database Solutions: MongoDB, data modeling and optimization. -Mobile Development: Native iOS/Android experiences via React Native.
+-Frontend Excellence: JavaScript (ES6+), React, Next.js, React Native. -Backend Mastery: Node.js, Express.js, RESTful API design, Python, FAST api. -Database Solutions: MongoDB, data modeling and optimization. -Mobile Development: Native iOS/Android experiences via React Native, -Testing & Debugging: Jest, Pytest, Postman, Swagger Docs .
 I specialize in creating seamless user experiences while maintaining clean, maintainable codebases that scale with business growth. My approach combines technical precision with strategic thinking to deliver solutions that not only meet current requirements but anticipate future needs.
 Ready to turn your vision into reality through code.`;
 
