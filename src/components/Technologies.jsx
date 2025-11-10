@@ -11,7 +11,8 @@ import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 import { GoCopilot } from "react-icons/go";
-
+import { FaPython } from "react-icons/fa";
+import { SiFastapi } from "react-icons/si";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -43,19 +44,119 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-4 items-center justify-center max-w-5xl mx-auto px-2"
       >
-  <motion.div variants={iconVariants(2.3)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><RiReactjsLine className="text-4xl sm:text-6xl text-cyan-400" /></motion.div>
-  <motion.div variants={iconVariants(2.0)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><TbBrandNextjs className="text-4xl sm:text-6xl" /></motion.div>
-  <motion.div variants={iconVariants(2.8)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><SiMongodb className="text-4xl sm:text-6xl text-green-500" /></motion.div>
-  <motion.div variants={iconVariants(2.2)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><SiExpress className="text-4xl sm:text-6xl text-red-700" /></motion.div>
-  <motion.div variants={iconVariants(2.7)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><FaNodeJs className="text-4xl sm:text-6xl text-green-500" /></motion.div>
-  <motion.div variants={iconVariants(2.0)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><TbBrandTypescript className="text-4xl sm:text-6xl text-blue-500" /></motion.div>
+        <motion.div
+          variants={iconVariants(2.3)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <RiReactjsLine className="text-4xl sm:text-6xl text-cyan-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.0)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <TbBrandNextjs className="text-4xl sm:text-6xl" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.8)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <SiMongodb className="text-4xl sm:text-6xl text-green-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.2)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <SiExpress className="text-4xl sm:text-6xl text-red-700" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.6)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <FaPython className="text-4xl sm:text-6xl text-yellow-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.7)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <FaNodeJs className="text-4xl sm:text-6xl text-green-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.0)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <TbBrandTypescript className="text-4xl sm:text-6xl text-blue-500" />
+        </motion.div>
 
-  <motion.div variants={iconVariants(2.5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><DiRedis className="text-4xl sm:text-6xl text-red-500" /></motion.div>
-  <motion.div variants={iconVariants(2.2)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><SiNestjs className="text-4xl sm:text-6xl text-green-500" /></motion.div>
-  <motion.div variants={iconVariants(2.5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><FaGithub className="text-4xl sm:text-6xl text-gray-500" /></motion.div>
-  <motion.div variants={iconVariants(2.0)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><FaAws className="text-4xl sm:text-6xl text-orange-500" /></motion.div>
-  <motion.div variants={iconVariants(2.9)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><FaDocker className="text-4xl sm:text-6xl text-blue-500" /></motion.div>
-  <motion.div variants={iconVariants(2.4)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"><GoCopilot className="text-4xl sm:text-6xl text-green-400" /></motion.div>
+        <motion.div
+          variants={iconVariants(2.5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <DiRedis className="text-4xl sm:text-6xl text-red-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.2)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <SiNestjs className="text-4xl sm:text-6xl text-green-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <FaGithub className="text-4xl sm:text-6xl text-gray-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.0)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <SiFastapi className="text-4xl sm:text-6xl text-green-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.0)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <FaAws className="text-4xl sm:text-6xl text-orange-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.9)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <FaDocker className="text-4xl sm:text-6xl text-blue-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.4)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-2 sm:p-4 col-span-1 flex justify-center"
+        >
+          <GoCopilot className="text-4xl sm:text-6xl text-green-400" />
+        </motion.div>
       </motion.div>
     </div>
   );
