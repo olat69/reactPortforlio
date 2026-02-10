@@ -2,58 +2,60 @@ import { HERO_CONTENT } from "../constants/index";
 import profilepic from "../assets/profilePicture.jpeg";
 import { motion } from "motion/react";
 
-const container = (delay) => ({
-  hidden: { x: -100, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
-});
-
 const Hero = () => {
   return (
-    <div className="border-neutral-950 pb-4 lg:mb-35 ml-5">
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
+    <header className="py-20">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col items-center lg:flex-row lg:items-center gap-12">
+          {/* Image: appears above text on mobile, moves to right on large screens */}
+          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-first lg:order-last">
+            <div className="w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border border-[var(--border)]">
+              <motion.img
+                src={profilepic}
+                alt="profile"
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Text column */}
+          <div className="w-full lg:w-3/5 min-w-0 text-center lg:text-left">
             <motion.h1
-              variants={container(0)}
-              initial="hidden"
-              animate="visible"
-              className="pb-10 text-6xl font-thin tracking-tight lg:mt-5 lg:text-6xl"
+              initial={{ y: 6, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight"
             >
-              Olaniyan Temitope
+              Hi, I’m Temitope
             </motion.h1>
-            <motion.span
-              variants={container(0.5)}
-              initial="hidden"
-              animate="visible"
-              className="w-full pb-5 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 
-            bg-clip-text text-4xl tracking-tight text-transparent"
-            >
-              Software Engineer
-            </motion.span>
+
             <motion.p
-              variants={container(1)}
-              initial="hidden"
-              animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-tighter "
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.15, duration: 0.5 }}
+              className="mt-6 max-w-2xl mx-auto lg:mx-0 text-lg text-[var(--text-muted)]"
             >
               {HERO_CONTENT}
             </motion.p>
-          </div>
-        </div>
-        <div className="w-full lg:w-1/2 lg:p-7">
-          <div className="flex justify-center">
-            <motion.img
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-              className="max-w-xs rounded-xl"
-              src={profilepic}
-              alt="profilepic"
-            />
+
+            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
+              <a href="/projects" className="btn-accent">
+                View Projects
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-4 py-2 border rounded-md border-[var(--border)]"
+              >
+                Contact
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

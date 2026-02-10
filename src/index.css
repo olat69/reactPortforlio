@@ -1,9 +1,110 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: Poppins, sans-serif;
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text-primary: #0f172a;
+  --text-muted: #6b7280;
+  --accent: #7c3aed; /* vivid purple accent */
+  --accent-2: #06b6d4;
+  --border: rgba(15,23,42,0.06);
+  --shadow: rgba(2,6,23,0.06);
 }
+
+[data-theme="dark"] {
+  --bg: #071022;
+  --surface: #071826;
+  --text-primary: #e6eef8;
+  --text-muted: #94a3b8;
+  --accent: #7c3aed;
+  --accent-2: #06b6d4;
+  --border: rgba(255,255,255,0.04);
+  --shadow: rgba(2,6,23,0.4);
+}
+
+/* Base typography */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1 { font-weight: 800; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.02; }
+h2 { font-weight: 700; font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
+p, li, a { color: var(--text-muted); }
+
+/* Utility tokens */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 30px var(--shadow);
+  border-radius: 12px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(124,58,237,0.12);
+}
+
+/* Minimal focus styles */
+:focus { outline: 2px solid transparent; outline-offset: 2px; box-shadow: 0 0 0 4px rgba(124,58,237,0.12); }
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Truncate text after 12 lines (works in modern webkit/blink/gecko) */
+.line-clamp-12 {
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Modal / Read-more overlay */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  padding: 1.5rem;
+}
+.modal-content {
+  max-width: 800px;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(2,6,23,0.6);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+}
+

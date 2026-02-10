@@ -1,7 +1,10 @@
-import cert1 from "../assets/cert-1.jpeg";
-import cert2 from "../assets/cert-2.jpeg";
+export { projects } from './projects.js';
+export { experiences } from './experiences.js';
+export { technologies } from './skills.js';
+export { blogPosts } from './blogPosts.js';
 
-export const HERO_CONTENT = `A Software Engineer transforming ideas into scalable digital experiences across web and mobile platforms.
+// Re-export individual constants that might still be used
+export const HERO_CONTENT = `A Full-Stack Software Engineer transforming ideas into scalable digital experiences across web and mobile platforms.
 With 3+ years of specialized experience in the software development ecosystem, I architect and develop high-performance applications that bridge the gap between innovative design and robust functionality. My expertise spans the complete development lifecycle—from responsive web interfaces built with React and Next.js to cross-platform mobile applications using React Native.
 Core Competencies
 -Frontend Excellence: JavaScript (ES6+), React, Next.js, React Native. -Backend Mastery: Node.js, Express.js, RESTful API design, Python, FAST api. -Database Solutions: SQL and NoSql, data modeling and optimization. -Mobile Development: Native iOS/Android experiences via React Native, -Testing & Debugging: Jest, Pytest, Postman, Swagger Docs .
@@ -18,20 +21,3 @@ export const CONTACT = {
   phoneNo: "+234 7056502162 ",
   email: "olaniyantemitope69@gmail.com",
 };
-
-export const CERTIFICATIONS = [
-  {
-    title: "Introduction to Dev-Ops",
-    image: cert1,
-    issuer: "Coursera - IBM",
-    date: "Aug 2025",
-    url: "https://coursera.org/verify/5JH9AP1WVSJA",
-  },
-  {
-    title: "AWS Cloud Practitioner Essentials",
-    image: cert2,
-    issuer: "Coursera - Amazon Web Services",
-    date: "Oct 2025",
-    url: "https://coursera.org/verify/BIC0ZYGQA6YD",
-  },
-];
