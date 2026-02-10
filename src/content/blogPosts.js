@@ -8,7 +8,7 @@ export const blogPosts = [
   tags: ["React Native", "Mobile", "Realtime", "UX"],
   date: "2025-01-20",
   readTime: "7 min read",
-  hero: "/src/assets/scriptwriter.webp",
+  hero: "/src/assets/scriptwriter.png",
   content: `
     <h2>Introduction</h2>
     <p>When I started building Scriptwriter for Nitoons, the goal was simple: create a professional-grade script editor that feels natural on a phone. What started as a straightforward idea turned into a deep exploration of mobile UX, offline-first architecture, and real-time collaboration. This project taught me valuable lessons about prioritizing the writing experience, building reliable sync systems, and keeping collaboration features lightweight yet effective.</p>
@@ -116,7 +116,7 @@ export const blogPosts = [
   tags: ["Documentation", "AI", "RAG", "Architecture"],
   date: "2025-01-12",
   readTime: "8 min read",
-  hero: "/src/assets/ai.webp",
+  hero: "/src/assets/ai.png",
   content: `
     <h2>The Challenge</h2>
     <p>Documentation becomes outdated the moment it's written. When I built Magical Docs, my goal was to create a system that keeps documentation synchronized with code through AI-assisted semantic search and retrieval-augmented generation (RAG). The result is a platform that surfaces relevant, grounded answers while always pointing readers back to the source code.</p>
@@ -218,7 +218,7 @@ export const blogPosts = [
   tags: ["Ecommerce", "Payments", "UX", "Node.js"],
   date: "2024-12-18",
   readTime: "7 min read",
-  hero: "/src/assets/book.jpg",
+  hero: "/src/assets/book.png",
   content: `
     <h2>Building Trust From Checkout</h2>
     <p>When I built Delight BookstorE, I learned that checkout is where trust is won or lost. Customers need clarity, reliability, and predictability. My focus was on minimizing surprises: transparent pricing, reliable payment confirmation, and clear order status at every step.</p>
@@ -319,7 +319,7 @@ export const blogPosts = [
   tags: ["API", "FastAPI", "Node.js", "Backend"],
   date: "2025-01-02",
   readTime: "6 min read",
-  hero: "/src/assets/api.webp",
+  hero: "/src/assets/api.png",
   content: `
     <h2>The Right Tool for the Job</h2>
     <p>When building APIs, both Node.js/Express and FastAPI are excellent choices. Throughout my projects, I've learned that the best framework isn't determined by benchmarks or trends—it's the one that matches your team's expertise, your project's requirements, and your deployment constraints.</p>
@@ -428,7 +428,7 @@ export const blogPosts = [
   tags: ["Dashboard", "Analytics", "Realtime", "UX"],
   date: "2024-12-10",
   readTime: "7 min read",
-  hero: "/src/assets/admin.webp",
+  hero: "/src/assets/admin.png",
   content: `
     <h2>Dashboards That Drive Action</h2>
     <p>When building the admin dashboard for OneTake, I realized that beautiful charts mean nothing if they don't help teams make decisions. Each visualization should answer a specific question and suggest a clear action. My approach focused on clarity, context, and enabling safe, informed decisions rather than just displaying data.</p>
@@ -544,7 +544,7 @@ export const blogPosts = [
   tags: ["DX", "Productivity", "Philosophy", "Tools"],
   date: "2025-01-15",
   readTime: "8 min read",
-  hero: "/src/assets/vibe.webp",
+  hero: "/src/assets/vibe.png",
   content: `
     <h2>What Is Vibe Coding?</h2>
     <p>Vibe coding is my term for an approach to software development that prioritizes intuition, creative flow, and rapid iteration over rigid planning and excessive tooling. It's about finding your rhythm, trusting your instincts, and building in a state of focused immersion where the code feels like it's writing itself. Think of it as the programming equivalent of being "in the zone"—where technical decisions feel natural and creativity flows freely.</p>
