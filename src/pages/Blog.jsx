@@ -58,8 +58,8 @@ const Blog = () => {
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-2">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex gap-2 flex-wrap">
                     {post.tags.map((t) => (
                       <span
                         key={t}
@@ -71,7 +71,7 @@ const Blog = () => {
                   </div>
                   <Link
                     to={`/blog/${post.slug}`}
-                    className="text-[var(--accent)] font-medium"
+                    className="text-[var(--accent)] font-medium w-max sm:ml-4"
                   >
                     Read →
                   </Link>
