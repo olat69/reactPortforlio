@@ -4,37 +4,28 @@ import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <div className="border-neutral-900 pb-4">
-      <h2 className="my-20 text-center text-4xl">
-        About <span className="text-neutral-500">Me</span>
-      </h2>
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex items-center justify-center">
-            <motion.img
-              whileInView={{ x: 0, opacity: 1 }}
-              initial={{ x: -100, opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-md rounded-2xl"
-              src={aboutImg}
-              alt="aboutImg"
-            />
-          </div>
+    <section className="py-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+
+      <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <img
+            src={aboutImg}
+            alt="me"
+            className="w-full rounded-lg object-cover shadow-soft"
+          />
         </div>
-        <div className="w-full lg:w-1/2">
-          <div className="flex justify-center lg:justify-start">
-            <motion.p
-              whileInView={{ x: 0, opacity: 1 }}
-              initial={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="my-8 max-w-xl p6"
-            >
-              {ABOUT_TEXT}
-            </motion.p>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="text-[var(--text-muted)] leading-relaxed">
+            {ABOUT_TEXT}
+          </p>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,57 +1,50 @@
-import { EXPERIENCES } from "../constants";
+import { experiences } from "../content";
 import { motion } from "motion/react";
+import { Calendar, Building } from "lucide-react";
 
 const Experience = () => {
   return (
-    <div className="border-neutral-900 pb-4">
-      <motion.h2
-        whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: -100, opacity: 0 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
-      >
-        Experience
+    <section className="py-12">
+      <motion.h2 className="text-3xl md:text-4xl font-bold mb-8">
+        Professional Experience
       </motion.h2>
-      <div>
-        {EXPERIENCES.map((experience, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-            <motion.div
-              whileInView={{ x: 0, opacity: 1 }}
-              initial={{ x: -100, opacity: 0 }}
-              transition={{ duration: 1.5 }}
-              className="w-full lg:w-1/4"
-            >
-              <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
-            </motion.div>
-            <motion.div
-              whileInView={{ x: 0, opacity: 1 }}
-              initial={{ x: 100, opacity: 0 }}
-              transition={{ duration: 1.5 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold text-xl">
-                {experience.role}
-                {" - "}
-                <span className=" text-purple-100 text-xl">
-                  {experience.company}
-                </span>
-              </h6>
-              <p className="mb-4 text-neutral-400">{experience.description}</p>
 
-              {experience.technologies.map((tech, index) => (
+      <div className="space-y-6">
+        {experiences.map((exp, idx) => (
+          <motion.article
+            key={idx}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: idx * 0.06 }}
+            className="card p-6"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h3 className="text-lg font-semibold">{exp.role}</h3>
+                <p className="text-sm text-[var(--text-muted)]">
+                  {exp.company}
+                </p>
+              </div>
+
+              <div className="text-sm text-[var(--text-muted)]">{exp.year}</div>
+            </div>
+
+            <p className="mt-4 text-[var(--text-muted)]">{exp.description}</p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {exp.technologies.map((t, i) => (
                 <span
-                  key={index}
-                  className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500"
+                  key={i}
+                  className="text-xs px-2 py-1 rounded bg-[transparent] border border-[var(--border)] text-[var(--text-muted)]"
                 >
-                  {" "}
-                  {tech}
+                  {t}
                 </span>
               ))}
-            </motion.div>
-          </div>
+            </div>
+          </motion.article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,7 @@
-import { PROJECTS } from "../constants";
+import { projects } from "../content";
 import { motion } from "motion/react";
+import { ExternalLink, Github } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 
 const Projects = () => {
   const handleClick = (url) => {
@@ -9,76 +11,129 @@ const Projects = () => {
   };
 
   return (
-    <div className="border-neutral-900 pb-4">
-      <motion.h2
-        whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: -100, opacity: 0 }}
-        transition={{ duration: 1 }}
-        className="my-20 text-center text-4xl"
-      >
-        Projects
-      </motion.h2>
-      <div>
-        {PROJECTS.map((project, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-            <motion.div
-              whileInView={{ x: 0, opacity: 1 }}
-              initial={{ x: -100, opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
-            >
-              <img
-                src={project.image}
-                width={150}
-                height={150}
-                alt={project.title}
-                className="mb-6 rounded"
-              />
-            </motion.div>
-            <motion.div
-              whileInView={{ x: 0, opacity: 1 }}
-              initial={{ x: 100, opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h6 className="mb-2 font-semibold hover:text-purple-700 text-xl">
-                  {project.title}
-                </h6>
-              </a>
+    <section className="py-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8">Featured Projects</h2>
 
-              <p className="mb-4 text-neutral-400">{project.description}</p>
-
-              <div className="mb-4">
-                {project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex gap-3 mt-4">
-                <button
-                  onClick={() => handleClick(project.url)}
-                  className="px-4 py-2 bg-purple-800 hover:bg-purple-700 text-white font-medium rounded transition-colors duration-200"
-                >
-                  View Project
-                </button>
-                <button
-                  onClick={() => handleClick(project.git)}
-                  className="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-neutral-700 hover:border-neutral-600 font-medium rounded transition-all duration-200"
-                >
-                  View Code
-                </button>
-              </div>
-            </motion.div>
-          </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project, i) => (
+          <ProjectCard
+            key={i}
+            project={project}
+            index={i}
+            onOpenUrl={handleClick}
+          />
         ))}
       </div>
-    </div>
+    </section>
+  );
+};
+
+const ProjectCard = ({ project, index, onOpenUrl }) => {
+  const [open, setOpen] = useState(false);
+  const [overflowing, setOverflowing] = useState(false);
+  const descRef = useRef(null);
+
+  useEffect(() => {
+    const el = descRef.current;
+    if (!el) return;
+    // check if element overflows (content taller than container)
+    const isOverflow = el.scrollHeight > el.clientHeight + 1;
+    setOverflowing(isOverflow);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  return (
+    <>
+      <motion.article
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45, delay: index * 0.04 }}
+        className="card overflow-hidden"
+      >
+        <div className="h-44 bg-gray-100 overflow-hidden">
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          )}
+        </div>
+
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+          <div className="mb-3 text-sm text-[var(--text-muted)]">
+            <p ref={descRef} className="line-clamp-12">
+              {project.description}
+            </p>
+
+            {/* show read more when content overflows */}
+            {overflowing && (
+              <button
+                onClick={() => setOpen(true)}
+                className="mt-2 text-sm text-[var(--accent)] font-medium"
+                aria-expanded={open}
+              >
+                ...read more
+              </button>
+            )}
+          </div>
+
+          <div className="flex items-center gap-3">
+            {project.url && (
+              <button
+                onClick={() => onOpenUrl(project.url)}
+                className="btn-accent inline-flex items-center gap-2 text-sm"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Live
+              </button>
+            )}
+            {project.git && (
+              <button
+                onClick={() => onOpenUrl(project.git)}
+                className="px-3 py-1 border rounded text-sm"
+              >
+                Code
+              </button>
+            )}
+          </div>
+        </div>
+      </motion.article>
+
+      {/* modal overlay for full description */}
+      {open && (
+        <div className="modal-backdrop" onClick={() => setOpen(false)}>
+          <div
+            className="modal-content relative"
+            role="dialog"
+            aria-modal="true"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setOpen(false)}
+              className="modal-close px-2 py-1 text-sm"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+
+            <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
+            <div className="prose max-w-none text-[var(--text-muted)]">
+              {project.description}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
