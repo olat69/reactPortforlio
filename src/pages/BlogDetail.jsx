@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { blogPosts } from "../content";
 
 const BlogDetail = () => {
@@ -10,7 +10,10 @@ const BlogDetail = () => {
     return (
       <section className="py-20 text-center">
         <h1 className="text-3xl font-bold">Post not found</h1>
-        <Link to="/blog" className="mt-4 inline-block text-[var(--accent)]">
+        <Link
+          to="/blog"
+          className="mt-4 inline-block text-[var(--color-accent)]"
+        >
           Back to blog
         </Link>
       </section>
@@ -21,7 +24,7 @@ const BlogDetail = () => {
     <section className="py-12 max-w-3xl mx-auto">
       <Link
         to="/blog"
-        className="text-sm text-[var(--text-muted)] mb-4 inline-block"
+        className="text-sm text-[var(--color-text-muted)] mb-4 inline-block"
       >
         ← Back to blog
       </Link>
@@ -37,7 +40,7 @@ const BlogDetail = () => {
       )}
 
       <h1 className="text-2xl md:text-3xl font-bold mb-2">{blogPost.title}</h1>
-      <div className="flex items-center gap-4 text-sm text-[var(--text-muted)] mb-6">
+      <div className="flex items-center gap-4 text-sm text-[var(--color-text-muted)] mb-6">
         <div className="flex items-center gap-2">
           <Calendar className="w-4 h-4" />
           {new Date(blogPost.date).toLocaleDateString()}
@@ -59,7 +62,7 @@ const BlogDetail = () => {
           {blogPost.tags.map((t) => (
             <span
               key={t}
-              className="text-xs px-2 py-1 border rounded text-[var(--text-muted)]"
+              className="text-xs px-2 py-1 border rounded text-[var(--color-text-muted)]"
             >
               {t}
             </span>

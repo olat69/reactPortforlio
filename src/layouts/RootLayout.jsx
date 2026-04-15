@@ -1,23 +1,44 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import ScrollProgress from "../components/ui/ScrollProgress";
+import { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Navbar from "../components/layout/Navbar";
+import CustomCursor from "../components/cursor/CustomCursor";
+import IntroSplash, { shouldShowIntro } from "../components/ui/IntroSplash";
 
 const RootLayout = () => {
-  return (
-    <div className="overflow-x-hidden text-[var(--text-secondary)] antialiased selection:bg-cyan-300 selection:text-cyan-900">
-      <ScrollProgress />
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-[var(--bg-primary)]" />
-        <div className="absolute -left-40 top-0 w-96 h-96 rounded-full bg-gradient-to-r from-purple-600 to-cyan-400 opacity-10 blur-3xl" />
-      </div>
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
-      <div className="container mx-auto px-4">
-        <Navbar />
-        <main>
-          <Outlet />
-        </main>
-      </div>
-    </div>
+  const [showIntro, setShowIntro] = useState(() => {
+    try {
+      return shouldShowIntro();
+    } catch {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    if (showIntro && isHome) {
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [showIntro, isHome]);
+
+  if (showIntro && isHome) {
+    return <IntroSplash onComplete={() => setShowIntro(false)} />;
+  }
+
+  return (
+    <>
+      <CustomCursor />
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 };
 

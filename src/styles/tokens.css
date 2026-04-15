@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* ─── Font imports ────────────────────────────────────────────── */
+@import "@fontsource/geist-mono/400.css";
+
+/* Optional local font registration (if PP Mori is installed on system) */
+@font-face {
+  font-family: "PP Mori";
+  src: local("PP Mori"), local("PPMori");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: local("PP Mori Semibold"), local("PPMori-SemiBold"), local("PPMori Semibold");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Tailwind v4 design tokens ──────────────────────────────── */
+@theme {
+  /* Fonts */
+  --font-display: "PP Mori", "PPMori", "Avenir Next", "Inter", system-ui, sans-serif;
+  --font-sans:    "PP Mori", "PPMori", "Avenir Next", "Inter", system-ui, sans-serif;
+  --font-mono:    "Cascadia Code", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Backgrounds — dark monochrome default */
+  --color-bg-0:   #0f1115;
+  --color-bg-1:   #171a1f;
+  --color-bg-2:   #20252d;
+
+  /* Text */
+  --color-text-primary: #f1f4f8;
+  --color-text-muted:   #a0a8b6;
+
+  /* Accent — Turquoise Blue */
+  --color-accent:     #21d4d9;
+  --color-accent-dim: #119ca6;
+
+  /* Borders */
+  --color-border: #2a3038;
+
+  /* Spacing landmarks */
+  --spacing-section: 10rem;   /* 160px — desktop section padding */
+  --spacing-gutter:  5vw;
+  --width-content:   1200px;
+}
+
+/* ─── Light mode overrides ───────────────────────────────────── */
+.light {
+  --color-bg-0:          #f5f7f9;
+  --color-bg-1:          #e9edf1;
+  --color-bg-2:          #dde3e9;
+  --color-text-primary:  #13161b;
+  --color-text-muted:    #4f5968;
+  --color-border:        #c7d0d9;
+  /* accent stays turquoise in both modes */
+}
+
+/* ─── Base resets & globals ──────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-0);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none; /* replaced by custom cursor on desktop */
+}
+
+@media (pointer: coarse) {
+  body { cursor: auto; }
+}
+
+/* ─── Selection ─────────────────────────────────────────────── */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg-0);
+}
+
+/* ─── Focus visible ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-0); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* ─── Content wrapper ────────────────────────────────────────── */
+.content-wrap {
+  max-width: var(--width-content);
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter);
+}
+
+/* ─── Reduce motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
