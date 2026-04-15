@@ -9,7 +9,7 @@ const NotFound = () => {
           <h1 className="text-8xl font-bold text-[var(--text-accent)] mb-4">
             404
           </h1>
-          <h2 className="text-2xl font-semibold text-[var(--text-primary)] mb-4">
+          <h2 className="text-2xl font-semibold text-[var(--color-text-primary)] mb-4">
             Page Not Found
           </h2>
           <p className="text-[var(--text-secondary)] mb-8">
@@ -30,7 +30,7 @@ const NotFound = () => {
           <div>
             <button
               onClick={() => window.history.back()}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--bg-card)] border border-[var(--border-primary)] text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-surface)] transition-colors duration-200 font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--bg-card)] border border-[var(--border-primary)] text-[var(--color-text-primary)] rounded-lg hover:bg-[var(--bg-surface)] transition-colors duration-200 font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               Go Back

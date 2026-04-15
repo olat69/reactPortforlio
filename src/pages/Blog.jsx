@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
-import { Calendar, Clock, Tag } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { blogPosts } from "../content";
 
 const Blog = () => {
   return (
-    <section className="py-12">
-      <div className="max-w-4xl mx-auto">
+    <section
+      style={{
+        paddingTop: "calc(80px + 3rem)",
+        paddingBottom: "5rem",
+        paddingInline: "5vw",
+      }}
+    >
+      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold">Blog & Articles</h1>
-          <p className="text-[var(--text-muted)] mt-2">
+          <p className="text-[var(--color-text-muted)] mt-2">
             Insights, tutorials, and thoughts on software development and
             design.
           </p>
@@ -28,7 +34,7 @@ const Blog = () => {
               )}
 
               <div className="p-4">
-                <div className="flex items-center justify-between text-sm text-[var(--text-muted)] mb-2">
+                <div className="flex items-center justify-between text-sm text-[var(--color-text-muted)] mb-2">
                   <div className="flex items-center gap-3">
                     <Calendar className="w-4 h-4" />
                     <span>
@@ -48,13 +54,13 @@ const Blog = () => {
                 <h3 className="text-lg font-semibold mb-2">
                   <Link
                     to={`/blog/${post.slug}`}
-                    className="hover:text-[var(--accent)]"
+                    className="hover:text-[var(--color-accent)]"
                   >
                     {post.title}
                   </Link>
                 </h3>
 
-                <p className="text-sm text-[var(--text-muted)] mb-3 line-clamp-3">
+                <p className="text-sm text-[var(--color-text-muted)] mb-3 line-clamp-3">
                   {post.excerpt}
                 </p>
 
@@ -63,7 +69,7 @@ const Blog = () => {
                     {post.tags.map((t) => (
                       <span
                         key={t}
-                        className="text-xs px-2 py-1 border rounded text-[var(--text-muted)]"
+                        className="text-xs px-2 py-1 border rounded text-[var(--color-text-muted)]"
                       >
                         {t}
                       </span>
@@ -71,7 +77,7 @@ const Blog = () => {
                   </div>
                   <Link
                     to={`/blog/${post.slug}`}
-                    className="text-[var(--accent)] font-medium w-max sm:ml-4"
+                    className="text-[var(--color-accent)] font-medium w-max sm:ml-4"
                   >
                     Read →
                   </Link>
