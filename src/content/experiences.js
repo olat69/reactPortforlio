@@ -2,7 +2,7 @@ export const experiences = [
    {
     year: "2026 - Present",
     role: "Software Engineer",
-    company: "Prodculator",
+    company: "Deo Media (United Kingdom)",
     description: `Leading full-stack development of a SaaS platform for film and TV production that turns scripts into data-driven financial intelligence.
     Built the React/TypeScript frontend with Material UI and integrated the Anthropic Claude API for AI-powered script analysis, enabling tax incentive calculations, crew cost estimates, location comparisons, and what-if scenario modeling.
     Architected the Python/FastAPI REST API backed by PostgreSQL with SQLAlchemy and Alembic, wiring in Stripe for subscription billing, AWS S3 for file storage, Redis for caching, and SendGrid for transactional email.`,
