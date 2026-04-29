@@ -11,7 +11,7 @@ export const experiences = [
   {
     year: "2026 - Present",
     role: "Full Stack Developer",
-    company: "TradeByBartr",
+    company: "Bartr",
     description: `Architected and shipped a cash-free barter marketplace where Nigerians exchange goods, services, skills, and time without money.
     Built the React PWA frontend and NestJS backend end-to-end, implementing real-time WebSocket trade negotiations, location-based matching, Paystack subscription tiers, and identity verification via Didit.
     Designed the trade session lifecycle from offer through completion, including ratings, Cloudinary media uploads, and an admin dashboard for platform oversight.`,

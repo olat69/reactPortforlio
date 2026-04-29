@@ -1,9 +1,45 @@
+import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+
+const toggleStyle = {
+  background: "none",
+  border: "none",
+  padding: 0,
+  cursor: "pointer",
+  fontFamily: "var(--font-sans)",
+  fontWeight: 500,
+  color: "var(--color-accent)",
+  display: "inline",
+  fontSize: "inherit",
+};
+
+function InlineToggleText({ text, limit, expanded, onToggle }) {
+  const isLong = text.length > limit;
+  if (!isLong) return <>{text}</>;
+  if (expanded)
+    return (
+      <>
+        {text}{" "}
+        <button style={toggleStyle} onClick={onToggle}>
+          Show less
+        </button>
+      </>
+    );
+  return (
+    <>
+      {text.slice(0, limit).trimEnd()}...{" "}
+      <button style={toggleStyle} onClick={onToggle}>
+        Read more
+      </button>
+    </>
+  );
+}
 
 /* ─── Featured (full-width) card ───────────────────────────── */
 export function FeaturedCard({ project }) {
   const { title, description, technologies, image, url, git } = project;
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <div
@@ -56,17 +92,13 @@ export function FeaturedCard({ project }) {
           {title}
         </h3>
 
-        <p
-          className="type-body"
-          style={{
-            marginBottom: "1.5rem",
-            display: "-webkit-box",
-            WebkitLineClamp: 4,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {description}
+        <p className="type-body" style={{ marginBottom: "1.5rem" }}>
+          <InlineToggleText
+            text={description}
+            limit={280}
+            expanded={expanded}
+            onToggle={() => setExpanded((v) => !v)}
+          />
         </p>
 
         {/* Stack */}
@@ -140,6 +172,7 @@ export function FeaturedCard({ project }) {
 /* ─── Compact (grid) card ────────────────────────────────── */
 export function CompactCard({ project }) {
   const { title, description, technologies, image, url, git } = project;
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <div
@@ -186,19 +219,13 @@ export function CompactCard({ project }) {
           {title}
         </h3>
 
-        <p
-          className="type-body"
-          style={{
-            fontSize: "0.9rem",
-            marginBottom: "1.25rem",
-            flex: 1,
-            display: "-webkit-box",
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {description}
+        <p className="type-body" style={{ fontSize: "0.9rem", marginBottom: "1.25rem", flex: 1 }}>
+          <InlineToggleText
+            text={description}
+            limit={160}
+            expanded={expanded}
+            onToggle={() => setExpanded((v) => !v)}
+          />
         </p>
 
         {/* Stack */}
