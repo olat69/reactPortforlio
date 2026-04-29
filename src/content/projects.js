@@ -6,9 +6,29 @@ import project6 from "../assets/project-6.jpg";
 import project7 from "../assets/project-7.jpg";
 import project8 from "../assets/project-8.png";
 import project9 from "../assets/project9.png";
+import antroph from "../assets/antroph.jpeg";
+import prodculator from "../assets/prodculator.png";
 
 
 export const projects = [
+  {
+    title: "Antroph",
+    image: antroph,
+    description:
+      "Antroph is an AI-powered audio/voice platform that enables users to create and listen to AI-narrated stories and playlists using custom or pre-built AI voices. Key capabilities include real-time voice synthesis via OpenAI's TTS/Realtime API, community-shared stories, personalized playlists, and a voice selection system. I architected and built the backend to support concurrent voice generation at scale, designing async job pipelines with Celery for background synthesis tasks, Redis for caching and session management, and PostgreSQL for persistent data. Firebase handles authentication and push notifications, while the entire stack is containerized with Docker and deployed via Coolify.",
+    technologies: ["FastAPI", "PostgreSQL", "Redis", "Celery", "Firebase", "Docker", "OpenAI"],
+    url: "https://apps.apple.com/ng/app/aura-by-antroph/id6758225797",
+    git: "https://github.com/Pledre/antroph-backend",
+  },
+  {
+    title: "Prodculator",
+    image: prodculator,
+    description:
+      "Prodculator (Scripteligence) is a SaaS platform for film and TV production that transforms scripts into data-driven financial intelligence. It analyzes scripts to deliver tax incentive calculations by filming location, crew cost estimates based on territory and production type, location recommendations and territory comparisons, funding and grant discovery for productions, and what-if scenario modeling for budget decisions. The platform helps producers and studios make informed financial decisions during pre-production by turning a script into a full breakdown of costs, incentives, and funding opportunities across different filming locations. I built the React/TypeScript frontend with Material UI and React Router, and a Python/FastAPI REST API backed by PostgreSQL with SQLAlchemy and Alembic. The platform integrates the Anthropic Claude API for AI-powered script analysis, Stripe for subscription billing, AWS S3 for file storage, Redis for caching, and SendGrid for transactional email.",
+    technologies: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Claude API", "Stripe", "AWS S3"],
+    url: "https://prodculator-test.vercel.app/",
+    git: "https://github.com/DeoMediaProjects/prodculator_frontend",
+  },
   {
     title: "TradeByBartr",
     image: project9,
@@ -33,6 +53,7 @@ export const projects = [
     description:
       "Developed a comprehensive mobile scriptwriting application designed to empower writers with professional-grade tools for creating scripts on-the-go. Built specifically for scriptwriters and creative writers who need more than basic note-taking apps, the application features industry-standard script formatting, character development tools, scene organization, and collaborative editing capabilities. Leading the development using React Native for frontend and Node.js for backend over 3-4 months to deliver a seamless cross-platform experience. The app successfully launched with positive user feedback from beta testers, addressing the genuine need for mobile-first scriptwriting tools that maintain professional formatting standards while offering the flexibility of anywhere-access writing.",
     technologies: ["React", "Node.js", "MongoDB", "Material Ui"],
+    url:"https://apps.apple.com/ng/app/scripts-by-nitoons/id6748554295",
     git: "https://github.com/Pledre/scriptwriter-mobile-app",
   },
   {
