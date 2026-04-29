@@ -7,9 +7,9 @@ import TerminalBox from "../ui/TerminalBox";
 gsap.registerPlugin(ScrollTrigger);
 
 const ABOUT_PARAGRAPHS = [
-  "Self-taught over 5+ years of shipping real products — from barter marketplaces to AI documentation platforms. I'm a problem-solver who breaks complexity down into clean, maintainable code.",
+  "With over 5+ years of shipping real products from barter marketplaces to AI documentation platforms. I'm a problem-solver who breaks complexity down into clean, maintainable code.",
   "Equally at home leading a sprint or heads-down in solo development. I care about the craft: clear APIs, documented decisions, and UIs that don't fight the user.",
-  "My toolkit spans React, Next.js, Node.js, Python/FastAPI, React Native, and the infrastructure layers that hold it all together — Docker, PostgreSQL, Redis, AWS.",
+  "My toolkit spans React, Next.js, Node.js, Python/FastAPI, React Native, and the infrastructure layers that hold it all together Docker, PostgreSQL, MongoDB, Redis, AWS.",
 ];
 
 export default function About() {
