@@ -9,7 +9,6 @@ export default function Contact() {
       style={{
         paddingBlock: "calc(var(--spacing-section) * 1.5)",
         textAlign: "center",
-        borderTop: "1px solid var(--color-border)",
       }}
     >
       <div className="content-wrap">
