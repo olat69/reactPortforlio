@@ -1,4 +1,13 @@
 export const experiences = [
+   {
+    year: "2026 - Present",
+    role: "Software Engineer",
+    company: "Prodculator",
+    description: `Leading full-stack development of a SaaS platform for film and TV production that turns scripts into data-driven financial intelligence.
+    Built the React/TypeScript frontend with Material UI and integrated the Anthropic Claude API for AI-powered script analysis, enabling tax incentive calculations, crew cost estimates, location comparisons, and what-if scenario modeling.
+    Architected the Python/FastAPI REST API backed by PostgreSQL with SQLAlchemy and Alembic, wiring in Stripe for subscription billing, AWS S3 for file storage, Redis for caching, and SendGrid for transactional email.`,
+    technologies: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Claude API", "Stripe", "AWS S3"],
+  },
   {
     year: "2026 - Present",
     role: "Full Stack Developer",
@@ -8,8 +17,17 @@ export const experiences = [
     Established automated deployment workflows using Vercel and Render, reducing deployment time by 80% and eliminating manual errors.`,
     technologies: ["React", "Node.js", "MongoDB", "Vercel", "Render"],
   },
-  {
+   {
     year: "2025 - Present",
+    role: "Backend Engineer",
+    company: "Antroph",
+    description: `Leading backend development for an AI-powered audio/voice platform, architecting scalable solutions with FastAPI, PostgreSQL, and Redis. 
+    Built and optimized RESTful APIs serving thousands of daily requests, with PostgreSQL as the primary data store.
+    Established automated deployment workflows using Docker and Coolify, reducing deployment time by 80% and eliminating manual errors.`,
+    technologies: ["FastAPI", "PostgreSQL", "Redis", "Celery", "Firebase", "Docker", "OpenAI"],
+  },
+  {
+    year: "2024 - 2025",
     role: "Software Engineer",
     company: "Nitoons",
     description: `Spearheading cross-platform mobile and web development, delivering production-ready applications with React Native and React.js.
@@ -18,22 +36,13 @@ export const experiences = [
     technologies: ["React Native", "Node.js", "MongoDB", "Docker", "Coolify"],
   },
   {
-    year: "2024 - 2025",
+    year: "2023 - 2024",
     role: "Frontend Developer",
     company: "Anthill Studio",
     description: `Crafted responsive, accessible web interfaces using Next.js and React, focusing on performance optimization and user experience.
     Integrated Material UI component library while maintaining brand consistency and creating custom components for unique design requirements.
     Collaborated directly with designers and backend teams in an agile environment, translating Figma designs into pixel-perfect implementations.`,
     technologies: ["React.js", "Next", "Material UI", "MongoDB"],
-  },
-  {
-    year: "2023 - 2024",
-    role: "Freelancing",
-    company: "Freelance",
-    description: `Delivered end-to-end web solutions for diverse clients across e-commerce, education, and service industries.
-    Built custom REST APIs with Express.js and Node.js, implementing authentication, payment processing, and third-party integrations.
-    Managed complete project lifecycles from client consultations and wireframing through deployment and handoff, consistently meeting deadlines and budget constraints.`,
-    technologies: ["React.js", "Express.js", "Node.js", "Tailwind"],
   },
   {
     year: "2021 - 2022",
