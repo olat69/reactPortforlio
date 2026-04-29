@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Github } from "lucide-react";
+import { Github, Download } from "lucide-react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 
@@ -187,6 +187,33 @@ export default function Hero() {
           >
             <Github size={16} />
             GitHub
+          </a>
+
+          <a
+            href="/cv.pdf"
+            download="Temitope_Olaniyan_CV.pdf"
+            aria-label="Download CV"
+            data-cursor="hover"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              fontFamily: "var(--font-sans)",
+              fontSize: "0.875rem",
+              fontWeight: 500,
+              color: "var(--color-text-muted)",
+              textDecoration: "none",
+              transition: "color 0.18s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = "var(--color-text-primary)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = "var(--color-text-muted)")
+            }
+          >
+            <Download size={16} />
+            Download CV
           </a>
         </div>
       </div>
