@@ -12,18 +12,18 @@ export const experiences = [
     year: "2026 - Present",
     role: "Full Stack Developer",
     company: "TradeByBartr",
-    description: `Leading full-stack development for a barter trading platform, architecting scalable solutions with React, TypeScript, and Node.js. 
-    Built and optimized RESTful APIs serving thousands of daily transactions, with MongoDB as the primary data store.
-    Established automated deployment workflows using Vercel and Render, reducing deployment time by 80% and eliminating manual errors.`,
+    description: `Architected and shipped a cash-free barter marketplace where Nigerians exchange goods, services, skills, and time without money.
+    Built the React PWA frontend and NestJS backend end-to-end, implementing real-time WebSocket trade negotiations, location-based matching, Paystack subscription tiers, and identity verification via Didit.
+    Designed the trade session lifecycle from offer through completion, including ratings, Cloudinary media uploads, and an admin dashboard for platform oversight.`,
     technologies: ["React", "Node.js", "MongoDB", "Vercel", "Render"],
   },
    {
     year: "2025 - Present",
     role: "Backend Engineer",
     company: "Antroph",
-    description: `Leading backend development for an AI-powered audio/voice platform, architecting scalable solutions with FastAPI, PostgreSQL, and Redis. 
-    Built and optimized RESTful APIs serving thousands of daily requests, with PostgreSQL as the primary data store.
-    Established automated deployment workflows using Docker and Coolify, reducing deployment time by 80% and eliminating manual errors.`,
+    description: `Designed and built the entire backend for an AI-powered audio platform enabling users to create and listen to AI-narrated stories using custom or pre-built voices.
+    Integrated OpenAI's TTS and Realtime API for live voice synthesis, with Celery handling async generation jobs and Redis managing sessions and caching at scale.
+    Wired Firebase for auth and push notifications, containerized the stack with Docker, and deployed to self-hosted infrastructure via Coolify.`,
     technologies: ["FastAPI", "PostgreSQL", "Redis", "Celery", "Firebase", "Docker", "OpenAI"],
   },
   {
