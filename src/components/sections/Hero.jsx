@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Github, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 
@@ -14,6 +14,7 @@ export default function Hero() {
   const subtitleRef = useRef(null);
   const ctaRef = useRef(null);
   const bgRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     const prefersReduced = window.matchMedia(
@@ -39,7 +40,12 @@ export default function Hero() {
           { y: 20, opacity: 0, duration: 0.6 },
           "-=0.4",
         )
-        .from(ctaRef.current, { y: 16, opacity: 0, duration: 0.5 }, "-=0.3");
+        .from(ctaRef.current, { y: 16, opacity: 0, duration: 0.5 }, "-=0.3")
+        .from(
+          imageRef.current,
+          { scale: 0.92, opacity: 0, duration: 0.9, ease: "power2.out" },
+          "-=0.9",
+        );
     });
 
     return () => ctx.revert();
@@ -89,7 +95,11 @@ export default function Hero() {
         />
       </div>
 
-      <div className="content-wrap" style={{ position: "relative", zIndex: 1 }}>
+      <div
+        className="content-wrap hero-grid"
+        style={{ position: "relative", zIndex: 1 }}
+      >
+        <div className="hero-text">
         {/* Eyebrow label */}
         <p
           className="type-label"
@@ -117,104 +127,25 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div
-          ref={ctaRef}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1.5rem",
-            flexWrap: "wrap",
-          }}
-        >
-          <a
-            href="#work"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .querySelector("#work")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            data-cursor="hover"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              fontFamily: "var(--font-sans)",
-              fontSize: "0.9375rem",
-              fontWeight: 500,
-              color: "var(--color-bg-0)",
-              background: "var(--color-accent)",
-              padding: "0.75rem 1.5rem",
-              borderRadius: "4px",
-              textDecoration: "none",
-              transition: "opacity 0.18s ease, transform 0.18s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.opacity = "0.88";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "1";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            View Work
-          </a>
-
-          <a
-            href="https://github.com/olat69"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profile"
-            data-cursor="hover"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              fontFamily: "var(--font-sans)",
-              fontSize: "0.875rem",
-              fontWeight: 500,
-              color: "var(--color-text-muted)",
-              textDecoration: "none",
-              transition: "color 0.18s ease",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.color = "var(--color-text-primary)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "var(--color-text-muted)")
-            }
-          >
-            <Github size={16} />
-            GitHub
-          </a>
-
+        <div ref={ctaRef} className="hero-cta-row">
           <a
             href="/cv.pdf"
             download="Temitope_Olaniyan_CV.pdf"
             aria-label="Download CV"
             data-cursor="hover"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              fontFamily: "var(--font-sans)",
-              fontSize: "0.875rem",
-              fontWeight: 500,
-              color: "var(--color-text-muted)",
-              textDecoration: "none",
-              transition: "color 0.18s ease",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.color = "var(--color-text-primary)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "var(--color-text-muted)")
-            }
+            className="hero-download-cta"
           >
-            <Download size={16} />
-            Download CV
+            <span className="hero-download-icon" aria-hidden="true">
+              <Download size={16} strokeWidth={2} />
+            </span>
+            <span>Download CV</span>
           </a>
+        </div>
+        </div>
+
+        {/* Hero portrait */}
+        <div ref={imageRef} className="hero-image" aria-hidden="false">
+          <img src="/hero.jpeg" alt="Temitope Olaniyan" loading="eager" />
         </div>
       </div>
 
@@ -261,6 +192,115 @@ export default function Hero() {
       </div>
 
       <style>{`
+        .hero-grid {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: clamp(2rem, 6vw, 5rem);
+        }
+        .hero-text {
+          flex: 1 1 480px;
+          min-width: 0;
+        }
+        .hero-cta-row {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+        .hero-download-cta {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.625rem;
+          min-height: 2.75rem;
+          padding: 0.65rem 0.95rem;
+          border: 1px solid color-mix(in srgb, var(--color-accent) 34%, var(--color-border));
+          border-radius: 8px;
+          background: color-mix(in srgb, var(--color-bg-1) 48%, transparent);
+          color: var(--color-text-primary);
+          font-family: var(--font-sans);
+          font-size: 0.9375rem;
+          line-height: 1;
+          font-weight: 600;
+          letter-spacing: 0;
+          text-decoration: none;
+          transition:
+            transform 0.22s ease,
+            border-color 0.22s ease,
+            background 0.22s ease,
+            color 0.22s ease;
+        }
+        .hero-download-cta::after {
+          content: "";
+          position: absolute;
+          left: 0.95rem;
+          right: 0.95rem;
+          bottom: -1px;
+          height: 1px;
+          background: var(--color-accent);
+          opacity: 0.65;
+          transform: scaleX(0.32);
+          transform-origin: left;
+          transition: transform 0.22s ease, opacity 0.22s ease;
+        }
+        .hero-download-cta:hover {
+          transform: translateY(-1px);
+          border-color: var(--color-accent);
+          background: color-mix(in srgb, var(--color-accent) 10%, var(--color-bg-1));
+        }
+        .hero-download-cta:hover::after {
+          opacity: 1;
+          transform: scaleX(1);
+        }
+        .hero-download-cta:active {
+          transform: translateY(0);
+        }
+        .hero-download-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 1rem;
+          height: 1rem;
+          color: var(--color-accent);
+        }
+        .hero-image {
+          flex: 0 0 auto;
+          width: clamp(220px, 30vw, 380px);
+          position: relative;
+        }
+        .hero-image::before {
+          content: "";
+          position: absolute;
+          inset: -6%;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle at 50% 50%,
+            color-mix(in srgb, var(--color-accent) 18%, transparent) 0%,
+            transparent 70%
+          );
+          z-index: -1;
+        }
+        .hero-image img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 50%;
+          box-shadow:
+            0 0 0 1px color-mix(in srgb, var(--color-accent) 28%, transparent),
+            0 24px 70px color-mix(in srgb, var(--color-accent) 16%, transparent);
+        }
+        @media (max-width: 820px) {
+          .hero-grid {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+          }
+          .hero-image {
+            width: clamp(180px, 48vw, 260px);
+            align-self: center;
+          }
+        }
+
         @keyframes heroGlow {
           from { opacity: 0.6; transform: scale(1); }
           to   { opacity: 1;   transform: scale(1.15); }
