@@ -63,36 +63,7 @@ export default function About() {
           }}
           className="md-grid-2"
         >
-          {/* Left — text */}
-          <div>
-            <h2
-              className="type-section"
-              data-about-anim
-              style={{ marginBottom: "2rem" }}
-            >
-              Engineer by trade,<br />builder by instinct.
-            </h2>
-
-            {ABOUT_PARAGRAPHS.map((p, i) => (
-              <p
-                key={i}
-                className="type-body"
-                data-about-anim
-                style={{ marginBottom: "1.25rem" }}
-              >
-                {p}
-              </p>
-            ))}
-
-            <div data-about-anim style={{ marginTop: "2rem" }}>
-              <TerminalBox
-                label="currently building"
-                value="TradeByBartr v2 — barter marketplace"
-              />
-            </div>
-          </div>
-
-          {/* Right — photo */}
+          {/* Left — photo */}
           <div
             data-about-anim
             style={{
@@ -129,11 +100,40 @@ export default function About() {
                 inset: 0,
                 border: "1px solid var(--color-accent)",
                 borderRadius: "4px",
-                transform: "translate(10px, 10px)",
+                transform: "translate(-10px, 10px)",
                 zIndex: -1,
                 opacity: 0.35,
               }}
             />
+          </div>
+
+          {/* Right — text */}
+          <div>
+            <h2
+              className="type-section"
+              data-about-anim
+              style={{ marginBottom: "2rem" }}
+            >
+              Engineer by trade,<br />builder by instinct.
+            </h2>
+
+            {ABOUT_PARAGRAPHS.map((p, i) => (
+              <p
+                key={i}
+                className="type-body"
+                data-about-anim
+                style={{ marginBottom: "1.25rem" }}
+              >
+                {p}
+              </p>
+            ))}
+
+            <div data-about-anim style={{ marginTop: "2rem" }}>
+              <TerminalBox
+                label="currently building"
+                value="TradeByBartr v2 — barter marketplace"
+              />
+            </div>
           </div>
         </div>
       </div>

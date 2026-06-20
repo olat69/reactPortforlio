@@ -1,59 +1,70 @@
 /* ─── Type scale utilities ───────────────────────────────────── */
 /* Import this after tokens.css */
+/*
+   Type system
+   ───────────
+   Display  → Bricolage Grotesque  · headings, set semibold + tight tracking
+   Body/UI  → Hanken Grotesk       · copy & UI, set regular/medium, airy leading
+   Mono     → Space Mono           · eyebrows, labels & code, uppercase + tracked
+*/
 
-/* Hero / Display ─ funky headline family */
+/* Hero / Display ─ Bricolage Grotesque, semibold, tight */
 .type-hero {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  font-weight: 400;
+  font-size: clamp(3.25rem, 8.5vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.025em;
+  font-weight: 600;
   color: var(--color-text-primary);
 }
 
-/* Section title ─ funky headline family */
+/* Section title ─ Bricolage Grotesque, semibold */
 .type-section {
   font-family: var(--font-display);
-  font-size: 2.25rem;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  font-weight: 400;
+  font-size: clamp(1.875rem, 3.6vw, 3rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  font-weight: 600;
   color: var(--color-text-primary);
 }
 
-/* Card title ─ playful body family */
+/* Card title ─ Hanken Grotesk, semibold */
 .type-card {
   font-family: var(--font-sans);
-  font-size: 1.1rem;
-  line-height: 1.3;
-  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.35;
+  letter-spacing: -0.011em;
+  font-weight: 600;
   color: var(--color-text-primary);
 }
 
-/* Body copy ─ playful body family */
+/* Body copy ─ Hanken Grotesk, regular, airy */
 .type-body {
   font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 1.0625rem;
+  line-height: 1.72;
+  letter-spacing: -0.003em;
   font-weight: 400;
   color: var(--color-text-muted);
 }
 
-/* Label / meta ─ playful body family, uppercase, tracked */
+/* Label / meta ─ Space Mono, uppercase, tracked */
 .type-label {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   line-height: 1.4;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-weight: 400;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
-/* Mono accent ─ Cascadia Code */
+/* Mono accent ─ Space Mono */
 .type-mono {
   font-family: var(--font-mono);
   font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   font-weight: 400;
   color: var(--color-text-muted);
 }
@@ -63,11 +74,12 @@
   font-family: var(--font-mono);
 }
 
-/* Display subtitle ─ playful body family, larger */
+/* Display subtitle ─ Hanken Grotesk, larger, lighter */
 .type-subtitle {
   font-family: var(--font-sans);
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1.0625rem, 1.9vw, 1.375rem);
   line-height: 1.6;
+  letter-spacing: -0.004em;
   font-weight: 400;
   color: var(--color-text-muted);
 }

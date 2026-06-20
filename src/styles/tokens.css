@@ -1,31 +1,21 @@
 @import "tailwindcss";
 
-/* ─── Font imports ────────────────────────────────────────────── */
-@import "@fontsource/geist-mono/400.css";
-
-/* Optional local font registration (if PP Mori is installed on system) */
-@font-face {
-  font-family: "PP Mori";
-  src: local("PP Mori"), local("PPMori");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: local("PP Mori Semibold"), local("PPMori-SemiBold"), local("PPMori Semibold");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+/* ─── Fonts (self-hosted via Fontsource) ─────────────────────────
+   Display  → Bricolage Grotesque  (expressive, high-contrast headings)
+   Body/UI  → Hanken Grotesk       (warm humanist grotesque workhorse)
+   Mono     → Space Mono           (retro-technical accent: logo, labels)
+   ───────────────────────────────────────────────────────────── */
+@import "@fontsource-variable/bricolage-grotesque/wght.css";
+@import "@fontsource-variable/hanken-grotesk/wght.css";
+@import "@fontsource/space-mono/400.css";
+@import "@fontsource/space-mono/700.css";
 
 /* ─── Tailwind v4 design tokens ──────────────────────────────── */
 @theme {
   /* Fonts */
-  --font-display: "PP Mori", "PPMori", "Avenir Next", "Inter", system-ui, sans-serif;
-  --font-sans:    "PP Mori", "PPMori", "Avenir Next", "Inter", system-ui, sans-serif;
-  --font-mono:    "Cascadia Code", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Bricolage Grotesque Variable", "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --font-sans:    "Hanken Grotesk Variable", "Hanken Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono:    "Space Mono", "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Backgrounds — dark monochrome default */
   --color-bg-0:   #0f1115;
