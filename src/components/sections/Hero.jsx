@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 
@@ -100,47 +100,48 @@ export default function Hero() {
         style={{ position: "relative", zIndex: 1 }}
       >
         <div className="hero-text">
-        {/* Eyebrow label */}
-        <p
-          className="type-label"
-          style={{ marginBottom: "1.5rem", color: "var(--color-accent)" }}
-        >
-          Full-Stack Software Engineer
-        </p>
-
-        {/* Hero name */}
-        <h1
-          ref={nameRef}
-          className="type-hero"
-          style={{ marginBottom: "2rem", maxWidth: "14ch" }}
-        >
-          {HERO_NAME}
-        </h1>
-
-        {/* Subtitle */}
-        <p
-          ref={subtitleRef}
-          className="type-subtitle"
-          style={{ maxWidth: "42ch", marginBottom: "3rem" }}
-        >
-          {HERO_SUBTITLE}
-        </p>
-
-        {/* CTAs */}
-        <div ref={ctaRef} className="hero-cta-row">
-          <a
-            href="/cv.pdf"
-            download="Temitope_Olaniyan_CV.pdf"
-            aria-label="Download CV"
-            data-cursor="hover"
-            className="hero-download-cta"
+          {/* Eyebrow label */}
+          <p
+            className="type-label"
+            style={{ marginBottom: "1.5rem", color: "var(--color-accent)" }}
           >
-            <span className="hero-download-icon" aria-hidden="true">
-              <Download size={16} strokeWidth={2} />
-            </span>
-            <span>Download CV</span>
-          </a>
-        </div>
+            Full-Stack Software Engineer
+          </p>
+
+          {/* Hero name */}
+          <h1
+            ref={nameRef}
+            className="type-hero"
+            style={{ marginBottom: "2rem", maxWidth: "14ch" }}
+          >
+            {HERO_NAME}
+          </h1>
+
+          {/* Subtitle */}
+          <p
+            ref={subtitleRef}
+            className="type-subtitle"
+            style={{ maxWidth: "42ch", marginBottom: "3rem" }}
+          >
+            {HERO_SUBTITLE}
+          </p>
+
+          {/* CTAs */}
+          <div ref={ctaRef} className="hero-cta-row">
+            <a
+              href="https://docs.google.com/document/d/1nge-hSIwo7Nmg2zDUYq8EmpFbZ02QH7WZsHmvINkmXQ/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View CV"
+              data-cursor="hover"
+              className="hero-download-cta"
+            >
+              <span className="hero-download-icon" aria-hidden="true">
+                <ExternalLink size={16} strokeWidth={2} />
+              </span>
+              <span>View CV</span>
+            </a>
+          </div>
         </div>
 
         {/* Hero portrait */}
