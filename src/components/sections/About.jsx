@@ -7,9 +7,9 @@ import TerminalBox from "../ui/TerminalBox";
 gsap.registerPlugin(ScrollTrigger);
 
 const ABOUT_PARAGRAPHS = [
-  "With over 5+ years of shipping real products from barter marketplaces to AI documentation platforms. I'm a problem-solver who breaks complexity down into clean, maintainable code.",
-  "Equally at home leading a sprint or heads-down in solo development. I care about the craft: clear APIs, documented decisions, and UIs that don't fight the user.",
-  "My toolkit spans React, Next.js, Node.js, Python/FastAPI, React Native, and the infrastructure layers that hold it all together Docker, PostgreSQL, MongoDB, Redis, AWS.",
+  "I'm a full-stack and AI product engineer with 5+ years shipping production systems across web, mobile, and AI — from React and React Native interfaces to FastAPI and NestJS backends.",
+  "I build the intelligence behind the product too: LLM orchestration with OpenAI, Anthropic, and LangChain; RAG and embeddings; realtime voice; and media pipelines that turn model output into dependable user experiences.",
+  "Comfortable owning architecture through deployment and production support, I care about secure APIs, observable systems, thoughtful UX, reliable payments, and infrastructure that teams can maintain.",
 ];
 
 export default function About() {
@@ -114,7 +114,7 @@ export default function About() {
               data-about-anim
               style={{ marginBottom: "2rem" }}
             >
-              Engineer by trade,<br />builder by instinct.
+              Engineer by trade,<br />product builder by instinct.
             </h2>
 
             {ABOUT_PARAGRAPHS.map((p, i) => (
@@ -130,8 +130,8 @@ export default function About() {
 
             <div data-about-anim style={{ marginTop: "2rem" }}>
               <TerminalBox
-                label="currently building"
-                value="TradeByBartr v2 — barter marketplace"
+                label="currently building at DeoMedia"
+                value="Prodculator — AI production intelligence"
               />
             </div>
           </div>

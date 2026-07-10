@@ -50,7 +50,7 @@ export default function IntroSplash({ onComplete }) {
       >
         <img
           src={logoSrc}
-          alt="Temitope.SWE intro logo"
+          alt="Temitope Olaniyan, full-stack and AI product engineer"
           onError={() => setLogoSrc(fallbackLogo)}
           style={{
             width: "100%",

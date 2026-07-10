@@ -7,7 +7,7 @@ gsap.registerPlugin(SplitText);
 
 const HERO_NAME = "Temitope Olaniyan";
 const HERO_SUBTITLE =
-  "I build full-stack products end-to-end — from first commit to production.";
+  "I ship AI-powered products end-to-end — from polished interfaces and APIs to model orchestration, payments, and cloud infrastructure.";
 
 export default function Hero() {
   const nameRef = useRef(null);
@@ -105,7 +105,7 @@ export default function Hero() {
             className="type-label"
             style={{ marginBottom: "1.5rem", color: "var(--color-accent)" }}
           >
-            Full-Stack Software Engineer
+            Full-Stack &amp; AI Product Engineer
           </p>
 
           {/* Hero name */}

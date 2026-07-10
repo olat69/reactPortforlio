@@ -28,6 +28,22 @@ export const technologies = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
   },
   {
+    name: "NestJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+  },
+  {
+    name: "OpenAI",
+    icon: "https://cdn.simpleicons.org/openai",
+  },
+  {
+    name: "Anthropic",
+    icon: "https://cdn.simpleicons.org/anthropic",
+  },
+  {
+    name: "LangChain",
+    icon: "https://cdn.simpleicons.org/langchain",
+  },
+  {
     name: "Express.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },

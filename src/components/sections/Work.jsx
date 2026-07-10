@@ -63,7 +63,7 @@ export default function Work() {
           Selected Work
         </p>
         <h2 className="type-section" style={{ marginBottom: "4rem" }}>
-          Things I&apos;ve built.
+          AI products and platforms I&apos;ve shipped.
         </h2>
 
         {/* Featured project */}

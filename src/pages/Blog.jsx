@@ -15,8 +15,8 @@ const Blog = () => {
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold">Blog & Articles</h1>
           <p className="text-[var(--color-text-muted)] mt-2">
-            Insights, tutorials, and thoughts on software development and
-            design.
+            Notes on full-stack systems, AI product engineering, architecture,
+            and the craft of shipping dependable software.
           </p>
         </header>
 

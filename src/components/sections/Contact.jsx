@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const EMAIL = "olaniyantemitope69@gmail.com";
+const PHONE = "+2347056502162";
 
 export default function Contact() {
   return (
@@ -30,7 +31,7 @@ export default function Contact() {
             marginBottom: "2.5rem",
           }}
         >
-          Let&apos;s build something.
+          Let&apos;s build something intelligent.
         </h2>
 
         <a
@@ -46,13 +47,36 @@ export default function Contact() {
             borderBottom: "1px solid var(--color-accent-dim)",
             paddingBottom: "2px",
             transition: "opacity 0.18s ease",
-            marginBottom: "3rem",
+            marginBottom: "1.25rem",
           }}
           onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.75")}
           onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
         >
           {EMAIL}
         </a>
+
+        <div
+          className="type-body"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "0.5rem 1rem",
+            marginBottom: "3rem",
+            color: "var(--color-text-muted)",
+          }}
+        >
+          <a
+            href={`tel:${PHONE}`}
+            data-cursor="hover"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            +234 705 650 2162
+          </a>
+          <span aria-hidden="true">·</span>
+          <span>Lagos, Nigeria</span>
+        </div>
 
         {/* Social links */}
         <div
@@ -116,7 +140,7 @@ export default function Contact() {
             color: "var(--color-border)",
           }}
         >
-          © 2026 Temitope Olaniyan
+          © 2026 Temitope Adedayo Olaniyan
         </p>
       </div>
     </section>

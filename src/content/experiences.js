@@ -1,56 +1,101 @@
 export const experiences = [
-   {
-    year: "2026 - Present",
+  {
+    year: "2026 – Present",
+    role: "Full-Stack & AI Engineer",
+    company: "DeoMedia · United Kingdom",
+    description:
+      "Building Prodculator, a production-intelligence platform that turns film scripts into investor-ready reports on territory strategy, incentives, crew costs, and comparable productions. I designed the FastAPI/PostgreSQL backend, built the Anthropic/OpenAI analysis pipeline and Stripe billing layer, shipped the React/TypeScript frontend, and delivered PDF reporting, S3 distribution, background workers, and Docker-based CI/CD.",
+    technologies: [
+      "FastAPI",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Anthropic",
+      "OpenAI",
+      "Stripe",
+      "AWS",
+    ],
+  },
+  {
+    year: "2025",
     role: "Software Engineer",
-    company: "Deo Media (United Kingdom)",
-    description: `Leading full-stack development of a SaaS platform for film and TV production that turns scripts into data-driven financial intelligence.
-    Built the React/TypeScript frontend with Material UI and integrated the Anthropic Claude API for AI-powered script analysis, enabling tax incentive calculations, crew cost estimates, location comparisons, and what-if scenario modeling.
-    Architected the Python/FastAPI REST API backed by PostgreSQL with SQLAlchemy and Alembic, wiring in Stripe for subscription billing, AWS S3 for file storage, Redis for caching, and SendGrid for transactional email.`,
-    technologies: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Claude API", "Stripe", "AWS S3"],
+    company: "TradebyBartr · Lagos, Nigeria",
+    description:
+      "Built a peer-to-peer trading marketplace across listings, trade sessions, messaging, referrals, and admin operations. I implemented realtime updates with Socket.IO and Redis-backed WebSocket gateways, integrated Paystack subscriptions and webhooks, Cloudinary media, and transactional email, and delivered the React/TypeScript user and admin experiences with Jest and Supertest coverage.",
+    technologies: [
+      "NestJS",
+      "MongoDB",
+      "React",
+      "TypeScript",
+      "Socket.IO",
+      "Redis",
+      "Paystack",
+      "Jest",
+    ],
   },
   {
-    year: "2026 - Present",
-    role: "Full Stack Developer",
-    company: "Bartr",
-    description: `Architected and shipped a cash-free barter marketplace where Nigerians exchange goods, services, skills, and time without money.
-    Built the React PWA frontend and NestJS backend end-to-end, implementing real-time WebSocket trade negotiations, location-based matching, Paystack subscription tiers, and identity verification via Didit.
-    Designed the trade session lifecycle from offer through completion, including ratings, Cloudinary media uploads, and an admin dashboard for platform oversight.`,
-    technologies: ["React", "Node.js", "MongoDB", "Vercel", "Render"],
-  },
-   {
-    year: "2025 - Present",
-    role: "Backend Engineer",
-    company: "Antroph",
-    description: `Designed and built the entire backend for an AI-powered audio platform enabling users to create and listen to AI-narrated stories using custom or pre-built voices.
-    Integrated OpenAI's TTS and Realtime API for live voice synthesis, with Celery handling async generation jobs and Redis managing sessions and caching at scale.
-    Wired Firebase for auth and push notifications, containerized the stack with Docker, and deployed to self-hosted infrastructure via Coolify.`,
-    technologies: ["FastAPI", "PostgreSQL", "Redis", "Celery", "Firebase", "Docker", "OpenAI"],
-  },
-  {
-    year: "2024 - 2025",
-    role: "Software Engineer",
-    company: "Nitoons",
-    description: `Spearheading cross-platform mobile and web development, delivering production-ready applications with React Native and React.js.
-    Engineered backend services and APIs handling real-time data synchronization across mobile and web clients.
-    Containerized applications using Docker and deployed to self-hosted infrastructure via Coolify, ensuring data sovereignty and reducing hosting costs by 60%.`,
-    technologies: ["React Native", "Node.js", "MongoDB", "Docker", "Coolify"],
+    year: "2025",
+    role: "Backend & AI Infrastructure Engineer",
+    company: "Antroph · Lagos, Nigeria",
+    description:
+      "Architected the FastAPI backend for an embedded companion-AI platform, including JWT authentication, HMAC refresh rotation, Argon2 password security, and realtime WebSocket infrastructure. I built the OpenAI voice pipeline for realtime TTS streaming, voice matching, and expression coordination, then added Sentry, Prometheus, Celery/Redis workers, dependency-aware health checks, and a React operations dashboard.",
+    technologies: [
+      "FastAPI",
+      "OpenAI",
+      "WebSockets",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "Sentry",
+      "Prometheus",
+    ],
   },
   {
-    year: "2023 - 2024",
-    role: "Frontend Developer",
-    company: "Anthill Studio",
-    description: `Crafted responsive, accessible web interfaces using Next.js and React, focusing on performance optimization and user experience.
-    Integrated Material UI component library while maintaining brand consistency and creating custom components for unique design requirements.
-    Collaborated directly with designers and backend teams in an agile environment, translating Figma designs into pixel-perfect implementations.`,
-    technologies: ["React.js", "Next", "Material UI", "MongoDB"],
+    year: "2023 – 2024",
+    role: "Web, Mobile & AI Product Engineer",
+    company: "Nitoons · Lagos, Nigeria",
+    description:
+      "Built AI-enabled storytelling and scriptwriting products end-to-end across a NestJS backend, React Native/Expo mobile apps, and web/admin interfaces. I shipped workflows for script analysis, TTS, audio and image generation, talking-head video, and FFmpeg processing; built the Scriptwriter and Storyteller apps with rich editing and offline-aware caching; and owned AWS and Docker infrastructure for production delivery.",
+    technologies: [
+      "React Native",
+      "Expo",
+      "NestJS",
+      "TypeScript",
+      "OpenAI",
+      "FFmpeg",
+      "AWS",
+      "Docker",
+    ],
   },
   {
-    year: "2021 - 2022",
-    role: "IT Intern",
-    company: "Adekunle Ajasin University",
-    description: `Gained foundational web development experience building internal university portals and information systems.
-    Mastered core web technologies (HTML, CSS, JavaScript) while learning to work within established codebases and version control workflows.
-    Partnered with senior developers to implement responsive UI components and improve page load performance through code optimization.`,
-    technologies: ["HTML", "CSS", "JavaScript"],
+    year: "2023 – 2024",
+    role: "Web Developer & Technical Consultant",
+    company: "Independent Client Projects · Remote",
+    description:
+      "Delivered custom web apps, dashboards, and business systems for multiple clients using React, TypeScript, Node/Express, MongoDB, and Firebase. Projects included casting tools for OneTake and Actors, plus Magical Docs — a GitHub App that indexes repositories with LangChain/OpenAI to generate in-repository documentation and provide codebase chat. I owned discovery, technical specifications, API contracts, and deployment planning.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "LangChain",
+      "OpenAI",
+      "Twilio",
+    ],
+  },
+  {
+    year: "2019 – 2021",
+    role: "IT Support Specialist",
+    company: "Adekunle Ajasin University · Ondo, Nigeria",
+    description:
+      "Supported university IT infrastructure, troubleshot technical issues for staff, and trained non-technical users on internal tools. I also built automation workflows that reduced repetitive support tickets.",
+    technologies: ["IT Support", "Automation", "Troubleshooting", "User Training"],
   },
 ];
+
+export const education = {
+  year: "2017 – 2023",
+  degree: "B.Sc. (Honours) Computer Science",
+  school: "Adekunle Ajasin University · Ondo State, Nigeria",
+};

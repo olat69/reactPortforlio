@@ -1,13 +1,24 @@
 import MarqueeTrack from "../ui/MarqueeTrack";
 
 const STACK_ROW_1 = [
-  "JavaScript", "TypeScript", "Python", "React", "Next.js",
-  "React Native", "Node.js", "Express.js", "FastAPI",
+  "Python", "FastAPI", "Node.js", "NestJS", "Express",
+  "TypeScript", "JavaScript", "React", "React Native", "Expo",
 ];
 
 const STACK_ROW_2 = [
-  "MongoDB", "PostgreSQL", "Redis", "Docker", "AWS",
-  "Tailwind CSS", "Git", "Vercel", "Render", "Coolify",
+  "OpenAI", "Anthropic", "LangChain", "Hugging Face", "Pinecone",
+  "RAG", "Embeddings", "Realtime Voice", "FFmpeg", "Prompt Engineering",
+];
+
+const STACK_ROW_3 = [
+  "PostgreSQL", "MongoDB", "Redis", "AWS", "S3", "SES", "SQS",
+  "MediaConvert", "Docker", "GitHub Actions", "Vercel",
+];
+
+const STACK_ROW_4 = [
+  "Stripe", "Paystack", "RevenueCat", "Socket.IO", "WebSockets", "Twilio",
+  "SendGrid", "Brevo", "Pytest", "Jest", "Vitest", "Supertest",
+  "Ruff", "ESLint", "Swagger", "OpenAPI",
 ];
 
 export default function Stack() {
@@ -21,14 +32,16 @@ export default function Stack() {
           className="type-label"
           style={{ marginBottom: "1rem", color: "var(--color-accent)" }}
         >
-          Stack
+          Technical Toolkit
         </p>
-        <h2 className="type-section">Tools of the trade.</h2>
+        <h2 className="type-section">Built for the full product lifecycle.</h2>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
         <MarqueeTrack items={STACK_ROW_1} speed={40} />
         <MarqueeTrack items={STACK_ROW_2} speed={50} reverse />
+        <MarqueeTrack items={STACK_ROW_3} speed={46} />
+        <MarqueeTrack items={STACK_ROW_4} speed={54} reverse />
       </div>
     </section>
   );

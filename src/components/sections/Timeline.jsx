@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { experiences } from "../../content/experiences";
+import { education, experiences } from "../../content/experiences";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,6 +177,39 @@ export default function Timeline() {
           {experiences.map((exp, i) => (
             <TimelineEntry key={i} exp={exp} i={i} />
           ))}
+        </div>
+
+        <div style={{ marginTop: "5rem" }}>
+          <p
+            className="type-label"
+            style={{ marginBottom: "1rem", color: "var(--color-accent)" }}
+          >
+            Education
+          </p>
+          <div
+            style={{
+              padding: "1.5rem",
+              border: "1px solid var(--color-border)",
+              borderRadius: "6px",
+              background: "var(--color-bg-1)",
+            }}
+          >
+            <p
+              className="type-label"
+              style={{ marginBottom: "0.5rem", color: "var(--color-text-muted)" }}
+            >
+              {education.year}
+            </p>
+            <h3
+              className="type-card"
+              style={{ marginBottom: "0.375rem", fontSize: "1.0625rem" }}
+            >
+              {education.degree}
+            </h3>
+            <p className="type-body" style={{ fontSize: "0.9375rem" }}>
+              {education.school}
+            </p>
+          </div>
         </div>
       </div>
     </section>
