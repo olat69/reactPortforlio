@@ -17,13 +17,13 @@ export const CERTIFICATIONS = [
     image: cert1,
     issuer: "Coursera - IBM",
     date: "Aug 2025",
-    url: "https://coursera.org/verify/5JH9AP1WVSJA",
+    url: "https://www.coursera.org/account/accomplishments/verify/5JH9AP1WVSJA",
   },
   {
     title: "AWS Cloud Practitioner Essentials",
     image: cert2,
     issuer: "Coursera - Amazon Web Services",
     date: "Oct 2025",
-    url: "https://coursera.org/verify/BIC0ZYGQA6YD",
+    url: "https://www.coursera.org/account/accomplishments/verify/BIC0ZYGQA6YD",
   },
 ];

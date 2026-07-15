@@ -2,21 +2,32 @@ import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import cert1 from "../../assets/cert-1.jpeg";
 import cert2 from "../../assets/cert-2.jpeg";
+import wesBadge from "../../assets/wes-badge.png";
+
+const WES_BADGE_ID = "aca32f17-a165-4e27-a9d6-d16f0de6bb74";
+const WES_BADGE_URL = `https://www.credly.com/badges/${WES_BADGE_ID}/public_url`;
 
 const CERTS = [
   {
     image: cert1,
     title: "Introduction to DevOps",
     issuer: "IBM — Coursera",
-    date: "August 2025",
-    url: "https://www.coursera.org/account/accomplishments/verify",
+    detail: "August 2025",
+    url: "https://www.coursera.org/account/accomplishments/verify/5JH9AP1WVSJA",
   },
   {
     image: cert2,
     title: "AWS Cloud Practitioner Essentials",
     issuer: "Amazon — Coursera",
-    date: "October 2025",
-    url: "https://www.coursera.org/account/accomplishments/verify",
+    detail: "October 2025",
+    url: "https://www.coursera.org/account/accomplishments/verify/BIC0ZYGQA6YD",
+  },
+  {
+    image: wesBadge,
+    title: "Verified International Academic Qualifications",
+    issuer: "WES — Credly",
+    detail: "July 2026",
+    url: WES_BADGE_URL,
   },
 ];
 
@@ -44,9 +55,9 @@ export default function Certifications() {
             gap: "1.5rem",
           }}
         >
-          {CERTS.map((cert, i) => (
+          {CERTS.map((cert) => (
             <motion.a
-              key={i}
+              key={cert.url}
               href={cert.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -105,7 +116,7 @@ export default function Certifications() {
                   className="type-mono"
                   style={{ fontSize: "0.75rem", marginBottom: "0.75rem" }}
                 >
-                  {cert.date}
+                  {cert.detail}
                 </p>
                 <span
                   style={{
