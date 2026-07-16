@@ -7,7 +7,7 @@ import TerminalBox from "../ui/TerminalBox";
 gsap.registerPlugin(ScrollTrigger);
 
 const ABOUT_PARAGRAPHS = [
-  "I'm a full-stack and AI product engineer with 5+ years shipping production systems across web, mobile, and AI — from React and React Native interfaces to FastAPI and NestJS backends.",
+  "I'm a full-stack Software and AI product engineer with 5+ years shipping production systems across web, mobile, and AI, from React and React Native interfaces to FastAPI and NestJS backends.",
   "I build the intelligence behind the product too: LLM orchestration with OpenAI, Anthropic, and LangChain; RAG and embeddings; realtime voice; and media pipelines that turn model output into dependable user experiences.",
   "Comfortable owning architecture through deployment and production support, I care about secure APIs, observable systems, thoughtful UX, reliable payments, and infrastructure that teams can maintain.",
 ];
@@ -17,7 +17,7 @@ export default function About() {
 
   useEffect(() => {
     const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReduced) return;
 
@@ -88,8 +88,12 @@ export default function About() {
                   display: "block",
                   transition: "transform 0.5s ease-out",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.03)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
               />
             </div>
             {/* Offset accent border */}
@@ -114,7 +118,9 @@ export default function About() {
               data-about-anim
               style={{ marginBottom: "2rem" }}
             >
-              Engineer by trade,<br />product builder by instinct.
+              Engineer by trade,
+              <br />
+              product builder by instinct.
             </h2>
 
             {ABOUT_PARAGRAPHS.map((p, i) => (
