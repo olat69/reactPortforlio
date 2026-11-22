@@ -31,7 +31,7 @@ export default function Contact() {
             marginBottom: "2.5rem",
           }}
         >
-          Let&apos;s build something intelligent.
+          What product could we build with AI?
         </h2>
 
         <a

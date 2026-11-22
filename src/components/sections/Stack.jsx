@@ -1,18 +1,18 @@
 import MarqueeTrack from "../ui/MarqueeTrack";
 
 const STACK_ROW_1 = [
+  "OpenAI", "Anthropic", "LangChain", "RAG", "Embeddings",
+  "Realtime Voice", "Prompt Engineering", "Pinecone", "Hugging Face", "FFmpeg",
+];
+
+const STACK_ROW_2 = [
   "Python", "FastAPI", "Node.js", "NestJS", "Express",
   "TypeScript", "JavaScript", "React", "React Native", "Expo",
 ];
 
-const STACK_ROW_2 = [
-  "OpenAI", "Anthropic", "LangChain", "Hugging Face", "Pinecone",
-  "RAG", "Embeddings", "Realtime Voice", "FFmpeg", "Prompt Engineering",
-];
-
 const STACK_ROW_3 = [
   "PostgreSQL", "MongoDB", "Redis", "AWS", "S3", "SES", "SQS",
-  "MediaConvert", "Docker", "GitHub Actions", "Vercel",
+  "MediaConvert", "Docker", "GitHub Actions", "Vercel", "Sentry", "Prometheus",
 ];
 
 const STACK_ROW_4 = [
@@ -34,7 +34,7 @@ export default function Stack() {
         >
           Technical Toolkit
         </p>
-        <h2 className="type-section">Built for the full product lifecycle.</h2>
+        <h2 className="type-section">Model integration, application development, and deployment.</h2>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>

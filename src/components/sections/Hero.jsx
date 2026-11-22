@@ -2,12 +2,11 @@ import { useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { HERO_CONTENT, HERO_ROLE } from "../../content";
 
 gsap.registerPlugin(SplitText);
 
 const HERO_NAME = "Temitope Olaniyan";
-const HERO_SUBTITLE =
-  "I ship Software and AI-powered products end-to-end, from polished interfaces and APIs to model orchestration, payments, and cloud infrastructure.";
 
 export default function Hero() {
   const nameRef = useRef(null);
@@ -105,7 +104,7 @@ export default function Hero() {
             className="type-label"
             style={{ marginBottom: "1.5rem", color: "var(--color-accent)" }}
           >
-            Software &amp; AI Product Engineer
+            {HERO_ROLE}
           </p>
 
           {/* Hero name */}
@@ -123,13 +122,13 @@ export default function Hero() {
             className="type-subtitle"
             style={{ maxWidth: "42ch", marginBottom: "3rem" }}
           >
-            {HERO_SUBTITLE}
+            {HERO_CONTENT}
           </p>
 
           {/* CTAs */}
           <div ref={ctaRef} className="hero-cta-row">
             <a
-              href="https://docs.google.com/document/d/1nge-hSIwo7Nmg2zDUYq8EmpFbZ02QH7WZsHmvINkmXQ/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1kpzgEtlS5THxQ8U-bmot9ssIDVaqdD3ABNKYuBPhtmg/edit?tab=t.0#heading=h.q0ulpdi4wlka"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View CV"
@@ -210,7 +209,6 @@ export default function Hero() {
           flex-wrap: wrap;
         }
         .hero-download-cta {
-          position: relative;
           display: inline-flex;
           align-items: center;
           gap: 0.625rem;
@@ -232,27 +230,10 @@ export default function Hero() {
             background 0.22s ease,
             color 0.22s ease;
         }
-        .hero-download-cta::after {
-          content: "";
-          position: absolute;
-          left: 0.95rem;
-          right: 0.95rem;
-          bottom: -1px;
-          height: 1px;
-          background: var(--color-accent);
-          opacity: 0.65;
-          transform: scaleX(0.32);
-          transform-origin: left;
-          transition: transform 0.22s ease, opacity 0.22s ease;
-        }
         .hero-download-cta:hover {
           transform: translateY(-1px);
           border-color: var(--color-accent);
           background: color-mix(in srgb, var(--color-accent) 10%, var(--color-bg-1));
-        }
-        .hero-download-cta:hover::after {
-          opacity: 1;
-          transform: scaleX(1);
         }
         .hero-download-cta:active {
           transform: translateY(0);

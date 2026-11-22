@@ -4,7 +4,7 @@ export const experiences = [
     role: "Full-Stack & AI Engineer",
     company: "DeoMedia · United Kingdom",
     description:
-      "Building Prodculator, a production-intelligence platform that turns film scripts into investor-ready reports on territory strategy, incentives, crew costs, and comparable productions. I designed the FastAPI/PostgreSQL backend, built the Anthropic/OpenAI analysis pipeline and Stripe billing layer, shipped the React/TypeScript frontend, and delivered PDF reporting, S3 distribution, background workers, and Docker-based CI/CD.",
+      "Built the script-to-report workflow for Prodculator so film teams can assess territories, incentives, crew costs, and comparable productions. I owned delivery across the Anthropic and OpenAI analysis pipeline, FastAPI and PostgreSQL backend, React and TypeScript frontend, and Stripe billing. I also shipped background PDF generation, S3 distribution, and Docker-based CI/CD.",
     technologies: [
       "FastAPI",
       "PostgreSQL",
@@ -38,7 +38,7 @@ export const experiences = [
     role: "Backend & AI Infrastructure Engineer",
     company: "Antroph · Lagos, Nigeria",
     description:
-      "Architected the FastAPI backend for an embedded companion-AI platform, including JWT authentication, HMAC refresh rotation, Argon2 password security, and realtime WebSocket infrastructure. I built the OpenAI voice pipeline for realtime TTS streaming, voice matching, and expression coordination, then added Sentry, Prometheus, Celery/Redis workers, dependency-aware health checks, and a React operations dashboard.",
+      "Brought realtime voice to an embedded AI companion with OpenAI speech streaming, voice matching, and expression coordination. I architected the FastAPI and WebSocket backend with JWT authentication, HMAC refresh rotation, and Argon2 password security. For production support, I added Sentry and Prometheus, Celery and Redis workers, dependency-aware health checks, and a React operations dashboard.",
     technologies: [
       "FastAPI",
       "OpenAI",
@@ -72,7 +72,7 @@ export const experiences = [
     role: "Web Developer & Technical Consultant",
     company: "Independent Client Projects · Remote",
     description:
-      "Delivered custom web apps, dashboards, and business systems for multiple clients using React, TypeScript, Node/Express, MongoDB, and Firebase. Projects included casting tools for OneTake and Actors, plus Magical Docs — a GitHub App that indexes repositories with LangChain/OpenAI to generate in-repository documentation and provide codebase chat. I owned discovery, technical specifications, API contracts, and deployment planning.",
+      "Led client discovery, wrote technical specifications, defined API contracts, and planned deployments for custom web apps and dashboards. I delivered casting tools for OneTake and Actors and built Magical Docs, a GitHub App that uses LangChain and OpenAI to generate repository documentation and answer questions about the code. The work spanned React, TypeScript, Node.js, Express, MongoDB, and Firebase.",
     technologies: [
       "React",
       "TypeScript",

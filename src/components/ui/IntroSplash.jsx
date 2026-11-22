@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import fallbackLogo from "../../assets/port-icon.jpg";
+import { HERO_ROLE } from "../../content";
 
 const INTRO_KEY = "portfolio_intro_seen_v1";
 const INTRO_DURATION_MS = 3200;
@@ -50,7 +51,7 @@ export default function IntroSplash({ onComplete }) {
       >
         <img
           src={logoSrc}
-          alt="Temitope Olaniyan, full-stack and AI product engineer"
+          alt={`Temitope Olaniyan, ${HERO_ROLE}`}
           onError={() => setLogoSrc(fallbackLogo)}
           style={{
             width: "100%",

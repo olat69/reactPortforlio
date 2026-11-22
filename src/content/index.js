@@ -3,9 +3,12 @@ export { education, experiences } from "./experiences.js";
 export { technologies } from "./skills.js";
 export { blogPosts } from "./blogPosts.js";
 
-export const HERO_CONTENT = `Full-stack and AI product engineer with 5+ years shipping production systems end-to-end across web, mobile, AI orchestration, payments, and cloud infrastructure.`;
+export const HERO_ROLE = "AI Engineer";
+export const HERO_CONTENT =
+  "Building software products that use AI to make complex tasks easier. From prototype to production, focusing on making each product easy to use and dependable in practice.";
 
-export const ABOUT_TEXT = `I build production products from React and React Native interfaces through FastAPI and NestJS backends, LLM orchestration with OpenAI, Anthropic, and LangChain, and the data, payments, observability, and cloud infrastructure that keep them reliable.`;
+export const ABOUT_TEXT =
+  "Hi I’m Temitope, an AI engineer with over five years of experience building software. My background in web and mobile development shapes how I work with AI. I start by looking at what people are trying to do and where they get stuck, then decide what a model can realistically improve.";
 
 export const CONTACT = {
   address: "Lagos, Nigeria",

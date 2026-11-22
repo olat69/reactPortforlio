@@ -29,18 +29,19 @@ export default function Work() {
         },
       });
 
-      /* Compact cards with stagger */
-      gsap.from("[data-compact-card]", {
-        y: 30,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.08,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "[data-compact-cards]",
-          start: "top 85%",
-          once: true,
-        },
+      sectionRef.current.querySelectorAll("[data-compact-cards]").forEach((grid) => {
+        gsap.from(grid.children, {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: grid,
+            start: "top 85%",
+            once: true,
+          },
+        });
       });
     }, sectionRef);
 
@@ -48,6 +49,10 @@ export default function Work() {
   }, []);
 
   const [featured, ...rest] = projects;
+  const groups = [
+    { title: "AI-powered products", items: rest.filter((project) => project.category !== "software") },
+    { title: "Full-stack engineering", items: rest.filter((project) => project.category === "software") },
+  ];
 
   return (
     <section
@@ -63,7 +68,7 @@ export default function Work() {
           Selected Work
         </p>
         <h2 className="type-section" style={{ marginBottom: "4rem" }}>
-          Products and platforms I&apos;ve shipped.
+          Software I&apos;ve built.
         </h2>
 
         {/* Featured project */}
@@ -71,18 +76,26 @@ export default function Work() {
           <FeaturedCard project={featured} />
         </div>
 
-        {/* 2-column grid */}
-        <div
-          data-compact-cards
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-            gap: "1.5rem",
-          }}
-        >
-          {rest.map((project) => (
-            <div key={project.title} data-compact-card>
-              <CompactCard project={project} />
+        <div style={{ display: "grid", gap: "3rem" }}>
+          {groups.map(({ title, items }) => (
+            <div key={title}>
+              <h3 className="type-section" style={{ fontSize: "1.5rem", marginBottom: "1.25rem" }}>
+                {title}
+              </h3>
+              <div
+                data-compact-cards
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 320px), 1fr))",
+                  gap: "1.5rem",
+                }}
+              >
+                {items.map((project) => (
+                  <div key={project.title}>
+                    <CompactCard project={project} />
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
