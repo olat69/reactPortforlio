@@ -1,45 +1,12 @@
-import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
-const toggleStyle = {
-  background: "none",
-  border: "none",
-  padding: 0,
-  cursor: "pointer",
-  fontFamily: "var(--font-sans)",
-  fontWeight: 500,
-  color: "var(--color-accent)",
-  display: "inline",
-  fontSize: "inherit",
-};
-
-function InlineToggleText({ text, limit, expanded, onToggle }) {
-  const isLong = text.length > limit;
-  if (!isLong) return <>{text}</>;
-  if (expanded)
-    return (
-      <>
-        {text}{" "}
-        <button style={toggleStyle} onClick={onToggle}>
-          Show less
-        </button>
-      </>
-    );
-  return (
-    <>
-      {text.slice(0, limit).trimEnd()}...{" "}
-      <button style={toggleStyle} onClick={onToggle}>
-        Read more
-      </button>
-    </>
-  );
-}
-
 /* ─── Featured (full-width) card ───────────────────────────── */
 export function FeaturedCard({ project }) {
-  const { title, description, technologies, image, url, git } = project;
-  const [expanded, setExpanded] = useState(false);
+  const {
+    title, description, technologies, image,
+    imageFit = "cover", imageBackground, url, linkLabel = "Live", git,
+  } = project;
 
   return (
     <div
@@ -59,15 +26,24 @@ export function FeaturedCard({ project }) {
       onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
     >
       {/* Image */}
-      <div style={{ overflow: "hidden", minHeight: "320px" }}>
+      <div
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          minHeight: "clamp(220px, 46vw, 320px)",
+          background: imageBackground,
+        }}
+      >
         <img
           src={image}
           alt={title}
           loading="lazy"
           style={{
+            position: "absolute",
+            inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: imageFit,
             display: "block",
             transition: "transform 0.5s ease-out",
           }}
@@ -82,7 +58,7 @@ export function FeaturedCard({ project }) {
           className="type-label"
           style={{ color: "var(--color-accent)", marginBottom: "1rem" }}
         >
-          Featured Project
+          Featured project
         </span>
 
         <h3
@@ -93,12 +69,7 @@ export function FeaturedCard({ project }) {
         </h3>
 
         <p className="type-body" style={{ marginBottom: "1.5rem" }}>
-          <InlineToggleText
-            text={description}
-            limit={280}
-            expanded={expanded}
-            onToggle={() => setExpanded((v) => !v)}
-          />
+          {description}
         </p>
 
         {/* Stack */}
@@ -131,7 +102,7 @@ export function FeaturedCard({ project }) {
               onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.75")}
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
-              Live <ArrowUpRight size={14} />
+              {linkLabel} <ArrowUpRight size={14} />
             </a>
           )}
           {git && (
@@ -171,13 +142,16 @@ export function FeaturedCard({ project }) {
 
 /* ─── Compact (grid) card ────────────────────────────────── */
 export function CompactCard({ project }) {
-  const { title, description, technologies, image, url, git } = project;
-  const [expanded, setExpanded] = useState(false);
+  const {
+    title, focus, description, technologies, image,
+    imageFit = "cover", imageBackground, url, linkLabel = "Live", git,
+  } = project;
 
   return (
     <div
       data-cursor="hover"
       style={{
+        height: "100%",
         border: "1px solid var(--color-border)",
         borderRadius: "6px",
         overflow: "hidden",
@@ -196,7 +170,7 @@ export function CompactCard({ project }) {
       }}
     >
       {/* Image */}
-      <div style={{ overflow: "hidden", height: "220px", flexShrink: 0 }}>
+      <div style={{ overflow: "hidden", height: "220px", flexShrink: 0, background: imageBackground }}>
         <img
           src={image}
           alt={title}
@@ -204,7 +178,7 @@ export function CompactCard({ project }) {
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: imageFit,
             display: "block",
             transition: "transform 0.5s ease-out",
           }}
@@ -215,17 +189,15 @@ export function CompactCard({ project }) {
 
       {/* Content */}
       <div style={{ padding: "1.5rem", display: "flex", flexDirection: "column", flex: 1 }}>
-        <h3 className="type-card" style={{ marginBottom: "0.625rem" }}>
+        <h4 className="type-card" style={{ marginBottom: "0.375rem" }}>
           {title}
-        </h3>
+        </h4>
+        <p className="type-mono" style={{ marginBottom: "0.75rem" }}>
+          {focus}
+        </p>
 
-        <p className="type-body" style={{ fontSize: "0.9rem", marginBottom: "1.25rem", flex: 1 }}>
-          <InlineToggleText
-            text={description}
-            limit={160}
-            expanded={expanded}
-            onToggle={() => setExpanded((v) => !v)}
-          />
+        <p className="type-body" style={{ fontSize: "1rem", marginBottom: "1.25rem", flex: 1 }}>
+          {description}
         </p>
 
         {/* Stack */}
@@ -265,7 +237,7 @@ export function CompactCard({ project }) {
                 textDecoration: "none",
               }}
             >
-              Live <ArrowUpRight size={12} />
+              {linkLabel} <ArrowUpRight size={12} />
             </a>
           )}
           {git && (

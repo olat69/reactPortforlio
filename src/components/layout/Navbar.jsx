@@ -157,17 +157,19 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
+            aria-label="Temitope Olaniyan home"
             onClick={() => setMenuOpen(false)}
             data-cursor="hover"
             style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.875rem",
-              color: "var(--color-accent)",
-              textDecoration: "none",
-              letterSpacing: "0.02em",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "44px",
+              height: "44px",
+              borderRadius: "8px",
             }}
           >
-            olat69
+            <img src="/teal-owl.webp" alt="" width={40} height={40} />
           </Link>
 
           {/* Controls: theme toggle + hamburger */}

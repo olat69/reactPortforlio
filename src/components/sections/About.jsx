@@ -2,14 +2,15 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import profilePic from "../../assets/me-2.jpg";
-import TerminalBox from "../ui/TerminalBox";
+import { ABOUT_TEXT } from "../../content";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ABOUT_PARAGRAPHS = [
-  "I'm a full-stack Software and AI product engineer with 5+ years shipping production systems across web, mobile, and AI, from React and React Native interfaces to FastAPI and NestJS backends.",
-  "I build the intelligence behind the product too: LLM orchestration with OpenAI, Anthropic, and LangChain; RAG and embeddings; realtime voice; and media pipelines that turn model output into dependable user experiences.",
-  "Comfortable owning architecture through deployment and production support, I care about secure APIs, observable systems, thoughtful UX, reliable payments, and infrastructure that teams can maintain.",
+  ABOUT_TEXT,
+  "I’ve used AI to help people find answers in documents and code, tailor learning material to their needs, and turn raw information into reports they can act on. I’ve also built real-time voice features and used image generation in creative workflows.",
+  "I design for the fact that models can be slow or wrong, connecting them to relevant sources, use fixed rules when results need to be consistent, and make outputs easy to verify. After launch, I monitor errors, response times, and costs so I can see where a feature needs improvements.",
+  "A brief can start with a sentence as simple as ‘this takes too long.’, 'This needs to be effective and dependable'. I work with teams and as a solo engineer to turn that into measurable goals, decide what to ship first, and make the trade-offs around time and cost optimization clear. After deployment, I look at outputs and feedbacks to help decide what’s worth building next.",
 ];
 
 export default function About() {
@@ -118,9 +119,7 @@ export default function About() {
               data-about-anim
               style={{ marginBottom: "2rem" }}
             >
-              Engineer by trade,
-              <br />
-              product builder by instinct.
+              How I build with AI
             </h2>
 
             {ABOUT_PARAGRAPHS.map((p, i) => (
@@ -133,13 +132,6 @@ export default function About() {
                 {p}
               </p>
             ))}
-
-            <div data-about-anim style={{ marginTop: "2rem" }}>
-              <TerminalBox
-                label="currently building at DeoMedia"
-                value="Prodculator — AI production intelligence"
-              />
-            </div>
           </div>
         </div>
       </div>
