@@ -18,7 +18,7 @@ export const projects = [
     imageFit: "contain",
     imageBackground: "#fdfdfd",
     description:
-      "10Trials helps learners prepare for exams and see where they need more practice. AI finds the exam they describe and creates questions on the topics they choose. Questions with set answers are scored against an answer key, and the results show which topics to revisit.",
+      "10Trials helps learners prepare for exams with targeted practice using a defined curriculum. It uses AI to find the exam described and creates questions on the relevant topics. Questions with set answers are graded, and the results show which weak areas to revisit helping learners focus their study efforts.",
     technologies: ["OpenAI", "FastAPI", "Next.js", "PostgreSQL"],
     url: "https://10trials.vercel.app/",
   },
@@ -27,7 +27,7 @@ export const projects = [
     focus: "Film budgeting and planning",
     image: prodculator,
     description:
-      "Prodculator helps film teams plan a production and prepare a report for investors. AI reads the script to pull out details that affect the budget. The report brings crew costs, tax incentives, and comparable productions together so producers can weigh where to shoot and what it might cost.",
+      "Prodculator helps film crews plan production and prepare budget report for investors. Production teams upload their scripts and prodculator leverages AI with internal data and tools to read scripts, pull out details affecting the budget and generate financial reports. The report brings crew costs, tax incentives, and comparable productions together so producers can weigh where to shoot and what it might cost.",
     technologies: [
       "React",
       "TypeScript",
@@ -38,15 +38,15 @@ export const projects = [
       "Stripe",
       "AWS",
     ],
-    url: "https://prodculator-test.vercel.app/",
+    url: "https://app.prodculator.com/",
     git: "https://github.com/DeoMediaProjects/prodculator_frontend",
   },
   {
-    title: "Antroph",
+    title: "Aura by Antroph",
     focus: "Spoken replies and expressions",
     image: antroph,
     description:
-      "Antroph is a companion you can talk to. AI gives it a voice, and it starts playing each reply as the speech is generated. Its expressions move in time with the words, so talking to it feels more natural.",
+      "Aura is built as a companion to interact with. Using AI voice generation, it is able to reply around a given context of gamified storytelling. It uses visual expressions to move in time with the words, so talking to it feels more natural.",
     technologies: [
       "FastAPI",
       "OpenAI",
@@ -64,7 +64,7 @@ export const projects = [
     focus: "AI portraits from one photo",
     image: studio14,
     description:
-      "Studio14 is a virtual photography studio in development. It uses AI to create three studio portraits from one photo of yourself. Each shoot starts with reviewed poses, outfits, and lighting, and each result is checked for quality so the portraits feel like part of the same shoot.",
+      "Studio14 is a virtual photography studio. It leverages a combination of AI tools to create studio portraits from photos of oneself. Each shoot starts with reviewed poses, outfits, and lighting, and each result is checked for quality so the portraits is consistent and realistic for users.",
     technologies: ["Next.js", "FastAPI", "Black Forest Labs", "AWS"],
     url: "https://studio14-beta.vercel.app/",
     linkLabel: "Product site",
@@ -74,7 +74,7 @@ export const projects = [
     focus: "Answers backed by source code",
     image: project8,
     description:
-      "Magical Docs is a GitHub app that helps developers understand unfamiliar code. AI writes searchable documentation and answers questions using the project's own files. Answers point back to the source, so developers can check the explanation and see where the code lives.",
+      "Magical Docs is a GitHub app that helps technical and non technical users understand code without having to go through the hassle of running the codebase itself . AI writes documentation and answers questions using the project's files. Answers point back to the source, so users can understand and make decisions based on the explanations .",
     technologies: [
       "LangChain",
       "OpenAI",
@@ -92,7 +92,7 @@ export const projects = [
     image: anzen,
     imageBackground: "#101d2c",
     description:
-      "Anzen is a product in development that helps software teams review security issues before launch. AI explains what the checks found and why each issue matters. Findings are linked to the evidence from the checks, so teams can confirm what was found and decide what to fix first.",
+      "Anzen is a product that helps software teams review security issues and risks before launch. Anzen uses AI internally and a set of guidelines, to explain what the checks found and why each issue and risk matters. Findings are linked to the evidence from the checks, so teams can confirm what was found and decide what to fix first before launch.",
     technologies: ["OpenAI", "Next.js", "Fastify", "PostgreSQL"],
     url: "https://anzen-landing-one.vercel.app/",
     linkLabel: "Product site",
@@ -110,7 +110,7 @@ export const projects = [
     linkLabel: "Campaign site",
   },
   {
-    title: "Nitoons Scriptwriter",
+    title: "Nitoon's Scriptwriter",
     focus: "Screenwriting and AI storytelling",
     image: project7,
     description:
@@ -133,7 +133,7 @@ export const projects = [
     imageFit: "scale-down",
     imageBackground: "#092c27",
     description:
-      "CashDrive gives fleet operators one dashboard for vehicle locations and alerts. A pilot uses AI to read AirTag details from the screen and turn them into records operators can review. That saves them from retyping each reading and gives them a chance to catch errors.",
+      "Fleet Monitor is a business internal tool that gives operators dashboard infomation of vehicle locations and alerts. An automated pilot uses AI to read AirTag details from the Apple Find My app and turn them into records operators can review and take actions on. That saves them from retyping each reading and gives them a chance to take corrective measures as regards to the business use case.",
     technologies: ["Python", "FastAPI", "React", "Tauri"],
   },
   {
