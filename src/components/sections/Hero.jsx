@@ -128,7 +128,7 @@ export default function Hero() {
           {/* CTAs */}
           <div ref={ctaRef} className="hero-cta-row">
             <a
-              href="https://docs.google.com/document/d/1kpzgEtlS5THxQ8U-bmot9ssIDVaqdD3ABNKYuBPhtmg/edit?tab=t.0#heading=h.q0ulpdi4wlka"
+              href="https://docs.google.com/document/d/1UvCHLDr2m6x2w6MsHlWoMp9f56tgFgyBEmQDUHsPBOo/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View CV"
